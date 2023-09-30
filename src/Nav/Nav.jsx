@@ -1,14 +1,14 @@
+import { Link } from "react-router-dom";
 import Swich from "./Swich";
 import "./nav.css";
 
 function Nav() {
 	//Nav-menu
 	const optionsMenu = [
-		{ id: 1, name: "Home", link: "#" },
-		{ id: 2, name: "About", link: "#About" },
-		{ id: 3, name: "Skills", link: "#Skills" },
-		{ id: 4, name: "Proyects", link: "#Proyects" },
-		{ id: 5, name: "Contac", link: "#Contac" },
+		{ id: 1, name: "Home", link: "/" },
+		{ id: 2, name: "About", link: "/Aboutme" },
+		{ id: 3, name: "Skills", link: "/Skills" },
+		{ id: 4, name: "Proyects", link: "/Projects" },
 	];
 
 	return (
@@ -19,9 +19,7 @@ function Nav() {
 			<ul className="menu">
 				{optionsMenu.map((option) => (
 					<li className="lista" key={option.id}>
-						<a className="enlaces" href={option.link}>
-							{option.name}
-						</a>
+						<Link className="enlaces" to={option.link}>{option.name}</Link>
 					</li>
 				))}
 			</ul>
