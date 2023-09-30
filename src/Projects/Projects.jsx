@@ -40,12 +40,12 @@ function Projects() {
 							<span className="leyenda__card">{card.leyend}</span>
 							<div className="iconos__card">
 								<span>{card.span}</span>
-							</div>
 							<div className="icon">
-								<img src={card.icons.html} alt={card.name} />
-								<img src={card.icons.css} alt={card.name} />
-								<img src={card.icons.sass} alt={card.name} />
-								<img src={card.icons.js} alt={card.name} />
+								<img src={card.icons.html} />
+								<img src={card.icons.css} />
+								<img src={card.icons.sass} />
+								<img src={card.icons.js} />
+							</div>
 							</div>
 						</div>
 					</div>
