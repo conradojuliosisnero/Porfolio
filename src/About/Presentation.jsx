@@ -8,19 +8,19 @@ function Presentation() {
 		{
 			id: 1,
 			link: "https://www.linkedin.com/in/julio-sisnero-358b09242/",
-			img: "../../img/linkedin.svg",
+			img: "../img/linkedin.svg",
 			alt: "linkedin",
 		},
 		{
 			id: 2,
 			link: "https://www.instagram.com/conradojulio17/",
-			img: "../../img/instagram.svg",
+			img: "../img/instagram.svg",
 			alt: "instagram",
 		},
 		{
 			id: 3,
 			link: "https://github.com/conradojuliosisnero",
-			img: "../../img/git.svg",
+			img: "../img/git.svg",
 			alt: "git",
 		},
 	];
