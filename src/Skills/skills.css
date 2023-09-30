@@ -1,0 +1,255 @@
+/* Sección de habilidades */
+.seccion__skills {
+    width: 100%;
+    padding-top: 50px;
+  }
+  
+  .seccion__skills .skill__titulo-contend {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .seccion__skills .skill__titulo-contend .titulo {
+    padding: 20px 0px 5px 0px;
+    font-size: 45px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
+  .seccion__skills .contend__cards {
+    background: url(../imagenes/Sound\ Wave.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 70px;
+  }
+  
+  .seccion__skills .contend__cards .skill__card {
+    position: relative;
+    width: 360px;
+    height: 210px;
+    border-radius: 20px;
+    margin: 0px 70px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 0px #666666;
+    background-color: #ffff;
+    overflow: hidden;
+  }
+  
+  .seccion__skills .contend__cards .skill__card:hover > .skill__img {
+    width: 150px;
+    height: 150px;
+    left: -75px;
+    top: calc(50% - 75px);
+  }
+  
+  .seccion__skills .contend__cards .skill__card .skill__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    left: 10px;
+    top: 10px;
+    z-index: 10;
+    position: absolute;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: solid 2px rgb(70, 70, 70);
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .seccion__skills .contend__cards .skill__card .skill__img .icono {
+    width: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .seccion__skills .contend__cards .skill__card .skill__contend {
+    position: absolute;
+    width: calc(100% - 75px);
+    right: 0;
+    padding: 28px;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  
+  .seccion__skills .contend__cards .skill__card .skill__contend .skill__titulo {
+    font-size: 25px;
+    color: #2c2c2c;
+  }
+  
+  .seccion__skills .contend__cards .skill__card .skill__contend .skill__texto {
+    font-size: 14px;
+    color: #666666;
+  }
+  
+  .seccion__skills .contend__cards .skill__card .skill__contend .skill__btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #0fc099, #5f0ff5, #bf00ff);
+    padding: 10px 25px;
+    color: #ffff;
+    z-index: 1;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-size: 400%;
+    text-decoration: none;
+  }
+  
+  /* Estilo oscuro para la tarjeta */
+  .card__dark .skill__card {
+    background-color: #3c3c3c;
+    box-shadow: 0px 0px 15px 0px #000000;
+  }
+  
+  .card__dark .skill__card .skill__img {
+    border: #eeeeee solid 2px;
+  }
+  
+  .card__dark .skill__card .skill__titulo {
+    color: #eeeeee;
+  }
+  
+  .card__dark .skill__card .skill__texto {
+    color: #eeeeee;
+  }
+  
+  /* Contenido de habilidades sobre mí */
+  .about__skills {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+  }
+  
+  .about__skills .about__contenido__skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 25px 0px 0px 0px;
+  }
+  
+  .about__skills .about__contenido__skills .about__imagen__skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 35px;
+    position: relative;
+    order: 1;
+  }
+  
+  .about__skills .about__contenido__skills .about__imagen__skills .imagen {
+    width: 350px;
+    object-fit: cover;
+  }
+  
+  .about__skills .about__contenido__skills .about__imagen__skills span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 80px;
+    left: 250px;
+    top: 0;
+    color: #bbbbbb;
+    border: solid #777777 2px;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 20px 10px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .about__skills .about__contenido__skills .about__texto__skills {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    text-align: start;
+    flex-direction: column;
+  }
+  
+  .about__skills .about__contenido__skills .about__texto__skills .texto {
+    text-align: start;
+    color: #777777;
+    width: 90%;
+    line-height: 25px;
+  }
+  
+  .about__skills .about__contenido__skills .about__texto__skills .about__btn__skills {
+    background-color: #4caf50;
+    border-radius: 7px;
+    border: none;
+    padding: 15px 30px;
+    margin: 25px 0px;
+    position: relative;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .about__skills .about__contenido__skills .about__texto__skills .about__btn__skills::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -150px;
+    background-color: #81c784;
+    transition: top 0.5s ease-in-out;
+  }
+  
+  .about__skills .about__contenido__skills .about__texto__skills .about__btn__skills:hover::after {
+    top: 0;
+  }
+  
+  .about__skills .about__contenido__skills .about__texto__skills .about__btn__skills span {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .about__skills .about__contenido__skills .about__texto__skills .about__btn__skills span a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .about__skills .about__contenido__skills .about__texto__skills .about__btn__skills:hover {
+    box-shadow: 0px 0px 15px 0px #4caf50,
+    0px 0px 25px 0px #4caf50;
+    background-color: #4caf50;
+  }
+  
+  /* Barras de desplazamiento personalizadas */
+  ::-webkit-scrollbar {
+    width: 13px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #bcbbbb;
+    border-radius: 15px;
+    transition: .5s ease;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #757575;
+    border-radius: 15px;
+  }
+  
