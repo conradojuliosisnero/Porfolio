@@ -34,7 +34,7 @@ export const Cards = [
         agregar interactividad y funcionalidad a los sitios web. Permite
         realizar acciones en respuesta a eventos y manipular elementos de
         la página.`,
-		img: "../../img/javaScript.svg",
+		img: "../../public/img/javascript.svg",
 		url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
 	},
 	{
@@ -71,7 +71,7 @@ export const Cards = [
 		cardtext: `    Adobe XD: Es una herramienta de diseño y prototipado de interfaz
         de usuario. Permite diseñar y crear prototipos interactivos para
         aplicaciones y sitios web de manera visual.`,
-		img: "../../img/adobeXD.svg",
+		img: "../../public/img/adobexd.svg",
 		url: "https://www.edix.com/es/instituto/adobe-xd/",
 	},
 	{

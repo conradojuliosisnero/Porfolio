@@ -13,9 +13,6 @@ function Nav() {
 
 	return (
 		<nav className="navegador" id="home">
-			<div className="navagador__titulo">
-				<span className="titulo">Julio</span>
-			</div>
 			<ul className="menu">
 				{optionsMenu.map((option) => (
 					<li className="lista" key={option.id}>

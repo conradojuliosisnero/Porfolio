@@ -57,8 +57,8 @@ export const projectsCards = [
 		icons: {
 			html: "../../img/html.svg",
 			css: "../../img/css.svg",
-			js: "../../img/javascript.svg",
 			php: "../../img/php.svg",
+			sql: "../../img/sql.svg"
 		},
 	},
 	{

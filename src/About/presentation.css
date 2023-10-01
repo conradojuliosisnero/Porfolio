@@ -1,5 +1,5 @@
 .contenido__principal {
-	padding: 50px;
+	padding: 0px 50px 0px 50px;
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-areas:
@@ -54,7 +54,6 @@
 
 .bienvenida__titulo .name__welcome {
 	letter-spacing: 7px;
-	color: #ffffff;
 	margin: 0;
 }
 

@@ -1,7 +1,6 @@
 /* Sección de habilidades */
 .seccion__skills {
     width: 100%;
-    padding-top: 50px;
   }
   
   .seccion__skills .skill__titulo-contend {
@@ -10,13 +9,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
-  
-  .seccion__skills .skill__titulo-contend .titulo {
-    padding: 20px 0px 5px 0px;
-    font-size: 45px;
-    font-weight: 500;
-    color: #ffffff;
   }
   
   .seccion__skills .contend__cards {
@@ -85,23 +77,14 @@
     font-size: 25px;
     color: #2c2c2c;
   }
+
+  .Skill__icons{
+    padding: 40px 0px;
+  }
   
   .seccion__skills .contend__cards .skill__card .skill__contend .skill__texto {
     font-size: 14px;
     color: #666666;
-  }
-  
-  .seccion__skills .contend__cards .skill__card .skill__contend .skill__btn {
-    display: inline-block;
-    background: linear-gradient(90deg, #0fc099, #5f0ff5, #bf00ff);
-    padding: 10px 25px;
-    color: #ffff;
-    z-index: 1;
-    margin-top: 10px;
-    border-radius: 5px;
-    font-weight: 600;
-    background-size: 400%;
-    text-decoration: none;
   }
   
   /* Estilo oscuro para la tarjeta */
@@ -129,7 +112,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 80px;
+    padding-top: 0px 50px 0px 50px;
   }
   
   .about__skills .about__contenido__skills {
@@ -138,7 +121,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 25px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
   }
   
   .about__skills .about__contenido__skills .about__imagen__skills {
@@ -239,13 +222,13 @@
   
   /* Barras de desplazamiento personalizadas */
   ::-webkit-scrollbar {
-    width: 13px;
+    width: 10px;
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #bcbbbb;
+    background-color: #2f2f2f;
     border-radius: 15px;
-    transition: .5s ease;
+    transition: 300ms ease;
   }
   
   ::-webkit-scrollbar-thumb:hover {

@@ -1,6 +1,6 @@
 /* .navegador */
 .navegador {
-  width: 80%;
+  width: 100%;
   position: relative;
   z-index: 1;
   padding: 20px 0px;
@@ -23,7 +23,7 @@
 .navegador .navagador__titulo .titulo {
   position: relative;
   padding: 10px;
-  font-size: var(--encabezado);
+  font-size: 1.3em;
   font-weight: 900;
   cursor: pointer;
   color: #ffffff;
@@ -35,7 +35,9 @@
 
 /* .menu */
 .navegador .menu {
+  width: 100%;
   display: flex;
+  justify-content: center;
   position: relative;
   list-style: none;
 }
@@ -50,8 +52,8 @@
 .navegador .menu .enlaces {
   text-decoration: none;
   font-weight: 700;
-  color: #ffffff;
   width: 100%;
+  color: #000;
   display: flex;
   padding: 10px 20px;
   cursor: pointer;

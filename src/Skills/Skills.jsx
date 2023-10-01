@@ -17,7 +17,7 @@ function Skills() {
 	return (
 		<section className="seccion__skills" id="skills">
 			<div className="skill__titulo-contend scroll__titulo">
-				<h3 className="titulo">Skills</h3>
+				<Icons></Icons>
 			</div>
 
 			<section className="about__skills">
@@ -32,7 +32,6 @@ function Skills() {
 						</div>
 					</div>
 				</div>
-				<Icons></Icons>
 			</section>
 
 		</section>

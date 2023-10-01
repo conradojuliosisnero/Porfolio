@@ -37,7 +37,6 @@ function AboutMe() {
 		<section className="about" id="about">
 			<div className="about__titulo scroll__titulo">
 				<span className="titulo">About Me</span>
-				<span className="leyenda">My Introduccion</span>
 			</div>
 			<div className="about__contenido">
 				<div className="about__imagen scroll__img">

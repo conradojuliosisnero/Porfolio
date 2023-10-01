@@ -10,7 +10,6 @@ function Projects() {
 	return (
 		<section className="seccion__proyectos" id="proyects">
 			<div className="contend__titulo">
-				<h3 className="titulo">Proyects</h3>
 			</div>
 
 			<section className="about__proyect">
@@ -45,6 +44,8 @@ function Projects() {
 								<img src={card.icons.css} />
 								<img src={card.icons.sass} />
 								<img src={card.icons.js} />
+								<img src={card.icons.php} />
+								<img src={card.icons.sql} />
 							</div>
 							</div>
 						</div>

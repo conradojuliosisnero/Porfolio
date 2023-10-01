@@ -63,7 +63,7 @@
 	flex-direction: column;
 	backdrop-filter: blur(10px);
 	transition: bottom 300ms ease;
-	background-color: rgba(70, 70, 70, 0.81);
+	background-color: rgba(0, 0, 0, 0.13);
 }
 
 .seccion__proyectos .contend__cards-proyectos .card .contenido a {
@@ -115,7 +115,7 @@
 .about__proyect {
 	width: 100%;
 	flex-direction:row;
-	padding-top: 50px;
+	padding-top: 0px;
 }
 
 .about__proyect .about__contenido__proyect {
@@ -127,13 +127,12 @@
 
 .about__proyect .about__contenido__proyect .about__imagen__proyect {
 	flex-direction: column;
-	padding: 0px 35px;
 	position: relative;
-	order: 1;
+	/* order: 1; */
 }
 
 .about__proyect .about__contenido__proyect .about__imagen__proyect .imagen {
-	width: 350px;
+	width: 330px;
 	object-fit: cover;
 }
 

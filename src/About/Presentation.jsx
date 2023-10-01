@@ -7,7 +7,7 @@ function Presentation() {
 	const LinkRedes = [
 		{
 			id: 1,
-			link: "https://www.linkedin.com/in/julio-sisnero-358b09242/",
+			link: "https://www.linkedin.com/in/julio-conrado-358b09242/",
 			img: "../img/linkedin.svg",
 			alt: "linkedin",
 		},

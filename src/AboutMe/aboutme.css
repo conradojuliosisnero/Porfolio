@@ -19,12 +19,6 @@
 .about__titulo .titulo {
 	font-size: 45px;
 	font-weight: 500;
-    color: #ffffff;
-}
-
-.about__titulo .leyenda {
-	font-weight: 500;
-	color: #b8b8b8;
 }
 
 /* caja de contenido de texto */
@@ -155,5 +149,4 @@
 .about__contenido .estadisticas div .numero {
 	font-size: 25px;
 	font-weight: 900;
-    color: #ffffff;
 }

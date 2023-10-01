@@ -1,10 +1,18 @@
-import React from "react";
 import { useState } from "react";
 import "./swich.css";
 
 function Swich() {
+	const [dark, setDark] = useState(false);
+  
+	const toggleSwitch = () => {
+	  setDark(!dark);
+	};
+  
 	return (
-		<label className="theme-switch">
+	  <label
+		className={`theme-switch ${dark ? "dark" : ""}`}
+		onClick={toggleSwitch}
+	  >
 			<input type="checkbox" className="theme-switch__checkbox" />
 			<div className="theme-switch__container">
 				<div className="theme-switch__clouds"></div>
