@@ -34,7 +34,7 @@ export const Cards = [
         agregar interactividad y funcionalidad a los sitios web. Permite
         realizar acciones en respuesta a eventos y manipular elementos de
         la página.`,
-		img: "../../public/img/javascript.svg",
+		img: "../../img/javascript.svg",
 		url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
 	},
 	{
