@@ -159,11 +159,17 @@
 @media screen and (max-width:720px){
 
 	.contenido__principal {
-		padding: 70px 0px 0px 0px;
+		padding: 70px 50px 0px 50px;
 		grid-template-areas:
-			"redes contenido contenido contenido contenido contenido"
-			"redes contenido contenido contenido contenido contenido";
+			"contenido contenido contenido contenido contenido contenido"
+			"contenido contenido contenido contenido contenido contenido"
+			"redes redes redes redes redes redes";
+		
+	}
 
+	.redes__sociales{
+		flex-direction: row;
+		padding: 30px 0px;
 	}
 
 	.texto{

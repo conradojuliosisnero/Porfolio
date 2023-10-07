@@ -27,4 +27,10 @@ body {
 	.contenedor__foto {
 		display: none;
 	}
+
+	.contenido__principal {
+    flex-wrap: wrap;
+  }
+	.redes__sociales {
+	}
 }
