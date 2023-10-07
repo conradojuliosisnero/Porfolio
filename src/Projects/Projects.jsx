@@ -15,8 +15,7 @@ function Projects() {
 			<section className="about__proyect">
 				<div className="about__contenido__proyect">
 					<div className="about__imagen__proyect scroll__img">
-						<img className="imagen" src="../../img/proyect.png" />
-						<span>proyects</span>
+						<span className="leyend">Projects</span>
 					</div>
 					<div className="about__texto__proyect">
 						<div>
@@ -26,7 +25,7 @@ function Projects() {
 				</div>
 			</section>
 
-			<div class="contend__cards-proyectos">
+			<div className="contend__cards-proyectos">
 				{projectsCards.map((card) => (
 					<div className="card" id="app_movies" key={card.id}>
 						<div className="contend__img">

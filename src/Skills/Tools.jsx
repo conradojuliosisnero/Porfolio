@@ -4,8 +4,8 @@ function Tools() {
 	return (
 		<div className="Skill__icons">
 			{CardTools.map((tool) => (
-				<div className="icon" key={tool.id}>
-					<img className="img__icon" src={tool.img} alt={tool.tittle} />
+				<div className="iconos" key={tool.id}>
+					<img className="img__iconos" src={tool.img} alt={tool.tittle} />
 				</div>
 			))}
 

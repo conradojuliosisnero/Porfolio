@@ -1,4 +1,3 @@
-import React from "react";
 import "./presentation.css";
 import Welcome from "./welcome";
 import Photo from "./Photo";
@@ -31,7 +30,7 @@ function Presentation() {
 				{LinkRedes.map((social) => (
 					<div className="list__iconos" key={social.id}>
 						<a href={social.link}>
-							<img className="iconos" src={social.img} alt={social.alt} />
+							<img className="icono" src={social.img} alt={social.alt} />
 						</a>
 					</div>
 				))}

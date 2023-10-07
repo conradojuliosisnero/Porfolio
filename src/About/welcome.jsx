@@ -1,4 +1,3 @@
-import React from "react";
 import './presentation.css'
 
 function Welcome() {
@@ -28,7 +27,7 @@ function Welcome() {
 				<div className="boton__contactar">
 					<button className="boton">
 						<span>
-							<a href={URLWhatsapp} target="_blank">
+							<a href={URLWhatsapp} target="_blank" rel='noreferrer'>
 								contact me
 							</a>
 						</span>
