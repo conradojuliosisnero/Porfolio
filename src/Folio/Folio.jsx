@@ -3,8 +3,9 @@ import Presentation from "../About/Presentation";
 import AboutMe from "../AboutMe/AboutMe";
 import Skills from "../Skills/Skills";
 import Projects from "../Projects/Projects.jsx";
+import Nofound from "../NoFound/Nofound";
+// import ContactMe from '../Contact/Contac'
 import { BrowserRouter as Router,Routes,Route,} from "react-router-dom";
-import ContactMe from '../Contact/Contac'
 
 function Folio() {
 	return (
@@ -16,7 +17,8 @@ function Folio() {
 				<Route path="/Skills" element={<Skills />} />
 				<Route path="/Projects" element={<Projects />} />
 				<Route path="/Projects" element={<Projects />} />
-				<Route path="/Contact" element={<ContactMe/>} />
+				{/* <Route path="/Contact" element={<ContactMe/>} /> */}
+				<Route path="*" element={<Nofound />} />
 			</Routes>
 		</Router>
 	);

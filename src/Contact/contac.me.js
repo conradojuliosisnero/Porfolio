@@ -6,7 +6,7 @@ const Form = styled.form`
 	gap: 10px;
     width: 550px;
 	min-width: 350px;
-	background-color: #cbcbcb;
+	background-color: #dbdbdb;
 	padding: 20px;
 	border-radius: 10px;
 	position: relative;
@@ -31,14 +31,14 @@ const Form = styled.form`
 		width: 100%;
 		padding: 10px 10px 20px 10px;
 		outline: 0;
-		border: 1px solid #355891;
+		border: 1px solid #ffffff;
 		border-radius: 5px;
 
 		+ span {
 			position: absolute;
 			left: 10px;
 			top: 15px;
-			color: #355891;
+			color: #333333;
 			font-size: 0.9em;
 			cursor: text;
 			transition: 0.3s ease;
@@ -97,7 +97,7 @@ const Form = styled.form`
 
 	.fancy {
 		background-color: white;
-		border: 2px solid #355891;
+		border: 2px solid #000000;
 		border-radius: 0px;
 		box-sizing: border-box;
 		color: #355891;
@@ -121,7 +121,7 @@ const Form = styled.form`
 			content: " ";
 			width: 1.7rem;
 			height: 2px;
-			background: #355891;
+			background: #333333;
 			top: 50%;
 			left: 1.5em;
 			position: absolute;
@@ -140,7 +140,7 @@ const Form = styled.form`
 			transition: all 0.3s ease-in-out;
 			text-transform: lowercase;
 			text-decoration: none;
-			color: #355891;
+			color: #333333;
 			transform: translateX(30%);
 		}
 
@@ -175,8 +175,8 @@ const Form = styled.form`
 		}
 
 		&:hover {
-			color: #355891;
-			background: #5f82a9;
+			color: #96ffb5;
+			background: #96ffb5;
 
 			&::before {
 				width: 1.5rem;
