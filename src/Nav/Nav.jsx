@@ -4,7 +4,7 @@ import "./nav.css";
 
 function Nav() {
 
-	const Menu = '../../public/img/menu.svg'
+	const Menu = '../../img/menu.svg'
 
 	//Nav-menu
 	const optionsMenu = [
