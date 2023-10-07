@@ -6,7 +6,12 @@ const ToggleSwitch = styled.label`
   display: inline-block;
   width: 60px;
   height: 34px;
-  right: 250px;
+  right: 50px;
+
+  @media (max-width: 720px) {
+   right: 20px;
+   margin: 15px 0px 0px 0px;
+  }
 `;
 
 const Slider = styled.span`

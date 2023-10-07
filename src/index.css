@@ -1,18 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap");
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family:   "Red Hat Display", sans-serif;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Red Hat Display", sans-serif;
 }
-
 
 body {
-  margin: 0;
-  width: 100%;
+	margin: 0;
+	width: 100%;
 }
 
+@media screen and (max-width: 720px) {
+	.Responsive__menu {
+		display: flex;
+	}
 
+	.navegador .menu {
+		display: none;
+	}
 
+	.navegador .theme-switch {
+		right: 10px;
+	}
 
-
+	.contenedor__foto {
+		display: none;
+	}
+}

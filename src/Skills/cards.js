@@ -66,15 +66,6 @@ export const Cards = [
 		url: "https://tailwindcss.com/",
 	},
 	{
-		id: 8,
-		tittle: "AdobeXD",
-		cardtext: `    Adobe XD: Es una herramienta de diseño y prototipado de interfaz
-        de usuario. Permite diseñar y crear prototipos interactivos para
-        aplicaciones y sitios web de manera visual.`,
-		img: "../../public/img/adobexd.svg",
-		url: "https://www.edix.com/es/instituto/adobe-xd/",
-	},
-	{
 		id: 9,
 		tittle: "SQL",
 		cardtext: ` SQL (Structured Query Language): Es un lenguaje utilizado para

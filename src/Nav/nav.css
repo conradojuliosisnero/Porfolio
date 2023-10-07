@@ -70,3 +70,23 @@
   flex-shrink: 5;
   width: 250px;
 }
+
+.Responsive__menu{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50px;
+  cursor: pointer;
+  display: none;
+  margin: 15px 0px 0px 0px;
+}
+
+.Responsive__menu .menu__responsive{
+  width: 100%;
+  height: 100%;
+}
+
+.Responsive__menu .menu__responsive:hover{
+  stroke: #94f894;
+}
+

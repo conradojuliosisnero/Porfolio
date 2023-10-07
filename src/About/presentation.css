@@ -155,3 +155,19 @@
 		transform: translateY(-20px);
 	}
 }
+
+@media screen and (max-width:720px){
+
+	.contenido__principal {
+		padding: 70px 0px 0px 0px;
+		grid-template-areas:
+			"redes contenido contenido contenido contenido contenido"
+			"redes contenido contenido contenido contenido contenido";
+
+	}
+
+	.texto{
+		width: 80%;
+	}
+
+}

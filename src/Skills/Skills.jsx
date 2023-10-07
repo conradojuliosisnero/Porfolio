@@ -1,5 +1,6 @@
 import "./skills.css";
 import Icons from "./Icons";
+import Tools from "./Tools";
 
 function Skills() {
 	const textSkills = `I have experience in HTML and CSS, and I am currently learning
@@ -12,12 +13,15 @@ function Skills() {
     have knowledge in computer hardware and software maintenance,
     which allows me to troubleshoot technical issues.`;
 
-	const urlTool = '../../img/tools.png'
+	const urlTool = "../../img/tools.png";
 
 	return (
 		<section className="seccion__skills" id="skills">
 			<div className="skill__titulo-contend scroll__titulo">
+				<span className="leyend">Skills</span>
 				<Icons></Icons>
+				<span className="leyend">Tools</span>
+				<Tools></Tools>
 			</div>
 
 			<section className="about__skills">
@@ -33,7 +37,6 @@ function Skills() {
 					</div>
 				</div>
 			</section>
-
 		</section>
 	);
 }

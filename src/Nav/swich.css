@@ -1,6 +1,6 @@
 .theme-switch {
 	position: absolute;
-	right: 50px;
+	right: 10px;
 	--toggle-size: 30px;
 	/* the size is adjusted using font-size,
        this is not transform scale,

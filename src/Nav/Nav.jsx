@@ -3,6 +3,9 @@ import Swich from "./Swich";
 import "./nav.css";
 
 function Nav() {
+
+	const Menu = '../../public/img/menu.svg'
+
 	//Nav-menu
 	const optionsMenu = [
 		{ id: 1, name: "Home", link: "/" },
@@ -14,6 +17,9 @@ function Nav() {
 
 	return (
 		<nav className="navegador" id="home">
+			<div className="Responsive__menu" >
+			<img className="menu__responsive" src={Menu} alt="Svg Menu" />
+			</div>
 			<ul className="menu">
 				{optionsMenu.map((option) => (
 					<li className="lista" key={option.id}>
