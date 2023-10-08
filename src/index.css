@@ -12,13 +12,6 @@ body {
 }
 
 @media screen and (max-width: 720px) {
-	.Responsive__menu {
-		display: flex;
-	}
-
-	.navegador .menu {
-		display: none;
-	}
 
 	.navegador .theme-switch {
 		right: 10px;
@@ -31,6 +24,5 @@ body {
 	.contenido__principal {
     flex-wrap: wrap;
   }
-	.redes__sociales {
-	}
+
 }

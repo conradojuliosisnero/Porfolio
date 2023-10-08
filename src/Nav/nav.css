@@ -1,54 +1,29 @@
-/* .navegador */
+/* Estilos generales */
 .navegador {
   width: 100%;
+  height: 50px;
   position: relative;
   z-index: 1;
-  padding: 20px 0px;
-  transition: background-color 400ms ease-in;
+  padding: 40px 0px;
   display: flex;
   justify-content: center;
+  background-color: rgba(255, 255, 255);
   align-items: center;
 }
 
-/* .navagador__titulo */
-.navegador .navagador__titulo {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  flex-shrink: 2;
-}
-
-/* .titulo */
-.navegador .navagador__titulo .titulo {
-  position: relative;
-  padding: 10px;
-  font-size: 1.3em;
-  font-weight: 900;
-  cursor: pointer;
-  color: #ffffff;
-}
-
-.navegador .navagador__titulo .titulo:hover {
-  color:#94f894;
-}
-
-/* .menu */
+/* Estilos del menú */
 .navegador .menu {
   width: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
   list-style: none;
 }
 
-/* .lista */
 .navegador .menu .lista {
   display: block;
   position: relative;
 }
 
-/* .enlaces */
 .navegador .menu .enlaces {
   text-decoration: none;
   font-weight: 700;
@@ -61,32 +36,96 @@
 }
 
 .navegador .menu .enlaces:hover {
-  color:#94f894;
-}
-
-/* .contend__swich */
-.navegador .contend__swich {
-  display: flex;
-  flex-shrink: 5;
-  width: 250px;
+  color: #94f894;
 }
 
 .Responsive__menu{
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 50px;
-  cursor: pointer;
   display: none;
-  margin: 15px 0px 0px 0px;
+  opacity: 1;
 }
 
-.Responsive__menu .menu__responsive{
-  width: 100%;
-  height: 100%;
+.menu__responsive{
+  transition: transform 300ms ease;
 }
 
-.Responsive__menu .menu__responsive:hover{
-  stroke: #94f894;
+.close__responsive{
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+
+  .navegador{
+    justify-content: flex-end;
+  }
+
+  .menu{
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0,0,0,.1);
+    backdrop-filter: blur(5px);
+    transition: right 300ms ease;
+  }
+
+  .menu__active{
+    right: 0;
+    top: 0;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .navegador .menu__active .enlaces{
+    color: #383838;
+    padding: 20px 0px;
+  }
+
+  .Responsive__menu{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: fixed;
+    left: 20px; 
+    cursor: pointer;
+    margin: 15px 0px 0px 0px;
+  }
+
+
+  .Responsive__menu {
+    position: absolute;
+  }
+  
+  .menu__responsive {
+    opacity: 1; 
+    transition: transform 300ms ease; 
+  }
+  
+  .menu__responsive.active {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+  
+  .close__responsive {
+    display: flex;
+    opacity: 0; 
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: transform 300ms ease; 
+  }
+  
+  .active__close {
+    opacity: 1;
+    transform: rotate(180deg); 
+  }
+  
+
 }
 
