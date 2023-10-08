@@ -83,6 +83,7 @@
   .navegador .menu__active .enlaces{
     color: #383838;
     padding: 20px 0px;
+    font-size: 1.5em;
   }
 
   .Responsive__menu{
