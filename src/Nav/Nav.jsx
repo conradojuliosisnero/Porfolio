@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import Swich from "./Swich";
+// import Swich from "./Swich";
+import DarkModeSwitch from './Swich'
 import "./nav.css";
 import { useState } from "react";
 
@@ -46,7 +47,8 @@ function Nav() {
 					</li>
 				))}
 			</ul>
-			<Swich></Swich>
+			
+			<DarkModeSwitch></DarkModeSwitch>
 		</nav>
 	);
 }

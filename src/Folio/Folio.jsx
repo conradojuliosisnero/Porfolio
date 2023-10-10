@@ -7,6 +7,9 @@ import Nofound from "../NoFound/Nofound";
 // import ContactMe from '../Contact/Contac'
 import { BrowserRouter as Router,Routes,Route,} from "react-router-dom";
 
+
+
+
 function Folio() {
 	return (
 		<Router>
@@ -15,7 +18,6 @@ function Folio() {
 				<Route path="/" element={<Presentation />} />
 				<Route path="/Aboutme" element={<AboutMe />} />
 				<Route path="/Skills" element={<Skills />} />
-				<Route path="/Projects" element={<Projects />} />
 				<Route path="/Projects" element={<Projects />} />
 				{/* <Route path="/Contact" element={<ContactMe/>} /> */}
 				<Route path="*" element={<Nofound />} />

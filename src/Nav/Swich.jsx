@@ -44,7 +44,7 @@ const Input = styled.input`
   height: 0;
 
   &:checked + ${Slider} {
-    background-color: #2196F3;
+    background-color: #2277ff;
   }
 
   &:checked + ${Slider}::before {
@@ -57,11 +57,7 @@ function DarkModeSwitch() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleModeToggle = () => {
-		if (isDarkMode === false) {
-			setIsDarkMode(true)
-		}else{
-			setIsDarkMode(false)
-		}
+      setIsDarkMode(!isDarkMode)
   };
 
   return (

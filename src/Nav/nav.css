@@ -112,6 +112,7 @@
   }
   
   .close__responsive {
+    cursor: pointer;
     display: flex;
     opacity: 0; 
     width: 50px;
