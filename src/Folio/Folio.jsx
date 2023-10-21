@@ -2,7 +2,7 @@ import Nav from "../Nav/Nav";
 import Presentation from "../About/Presentation";
 import AboutMe from "../AboutMe/AboutMe";
 import Skills from "../Skills/Skills";
-import Projects from "../Projects/Projects.jsx";
+import Projects from "../Projects/Projects";
 import Nofound from "../NoFound/Nofound";
 // import ContactMe from '../Contact/Contac'
 import { BrowserRouter as Router,Routes,Route,} from "react-router-dom";
