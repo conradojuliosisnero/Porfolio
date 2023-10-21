@@ -95,7 +95,7 @@ export const projectsCards = [
 		url: "https://weather-app-six-eta-39.vercel.app/",
 		img: "../../img/weatherapp.png",
 		icons: {
-			js: "../../public/img/react.svg",
+			js: "../../img/react.svg",
 		},
 	},
 ];
