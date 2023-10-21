@@ -58,7 +58,7 @@ export const projectsCards = [
 			html: "../../img/html.svg",
 			css: "../../img/css.svg",
 			php: "../../img/php.svg",
-			sql: "../../img/sql.svg"
+			sql: "../../img/sql.svg",
 		},
 	},
 	{
@@ -73,7 +73,7 @@ export const projectsCards = [
 			css: "../../img/css.svg",
 			js: "../../img/javascript.svg",
 		},
-	},	
+	},
 	{
 		id: 8,
 		name: "To do List",
@@ -85,6 +85,17 @@ export const projectsCards = [
 			html: "../../img/html.svg",
 			sass: "../../img/sass.svg",
 			js: "../../img/javascript.svg",
+		},
+	},
+	{
+		id: 9,
+		name: "Weather App",
+		leyend: "Proyect",
+		span: "Responsive",
+		url: "https://weather-app-six-eta-39.vercel.app/",
+		img: "../../img/weatherapp.png",
+		icons: {
+			js: "../../public/img/react.svg",
 		},
 	},
 ];
