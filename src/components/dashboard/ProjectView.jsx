@@ -11,7 +11,7 @@ export default function ProjectView() {
   // Función para obtener los datos de los proyectos desde la base de datos
   const getDataProjects = async () => {
     try {
-      const response = await fetch("http://localhost:3001/projects");
+      const response = await fetch("http://localhost:3000/projects");
       if (response.ok) {
         const data = await response.json();
         setDataprojects(data);
