@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Folio from './Folio/Folio'
+import Folio from './components/Folio/Folio'
 import './index.css'
 
 

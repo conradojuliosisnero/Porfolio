@@ -1,4 +1,3 @@
-import React from "react";
 import "./presentation.css";
 
 function Photo() {

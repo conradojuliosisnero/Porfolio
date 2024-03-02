@@ -1,7 +1,7 @@
 export const projectsCards = [
 	{
 		id: 1,
-		img: "../../img/card.jpg",
+		img: "/public/img/card.jpg",
 		name: "Card Music",
 		url: "https://github.com/conradojuliosisnero/card-shop-music",
 		leyend: "Card",
@@ -14,7 +14,7 @@ export const projectsCards = [
 		leyend: "Card",
 		span: "Responsive",
 		url: "https://github.com/conradojuliosisnero/QR-card",
-		img: "../../img/qrcomponet.jpg",
+		img: "/public/img/qrcomponet.jpg",
 		icons: { html: "../../img/html.svg", sass: "../../img/sass.svg" },
 	},
 	{
@@ -32,7 +32,7 @@ export const projectsCards = [
 		leyend: "Card",
 		span: "Responsive",
 		url: "https://github.com/conradojuliosisnero/card-shop",
-		img: "../../img/cardshop.png",
+		img: "/public/img/cardshop.png",
 		icons: { html: "../../img/html.svg", sass: "../../img/sass.svg" },
 	},
 	{
@@ -41,7 +41,7 @@ export const projectsCards = [
 		leyend: "Proyect",
 		span: "Responsive",
 		url: "https://conradojuliosisnero.github.io/encriptador/",
-		img: "../../img/encriptador.png",
+		img: "/public/img/encriptador.png",
 		icons: {
 			html: "../../img/html.svg",
 			sass: "../../img/sass.svg",
@@ -53,12 +53,12 @@ export const projectsCards = [
 		name: "App Task",
 		leyend: "Proyect",
 		url: "https://apptasksite.000webhostapp.com/app-tareas/task.php",
-		img: "../../img/app-task.png",
+		img: "/public/img/app-task.png",
 		icons: {
-			html: "../../img/html.svg",
-			css: "../../img/css.svg",
-			php: "../../img/php.svg",
-			sql: "../../img/sql.svg",
+			html: "/public/img/html.svg",
+			css: "/public/img/css.svg",
+			php: "/public/img/php.svg",
+			sql: "/public/img/sql.svg",
 		},
 	},
 	{
@@ -67,11 +67,11 @@ export const projectsCards = [
 		leyend: "Proyect",
 		span: "Responsive",
 		url: "https://moviescon.vercel.app/",
-		img: "../../img/app-movies.png",
+		img: "/public/img/app-movies.png",
 		icons: {
-			html: "../../img/html.svg",
-			css: "../../img/css.svg",
-			js: "../../img/javascript.svg",
+			html: "/public/img/html.svg",
+			css: "/public/img/css.svg",
+			js: "/public/img/javascript.svg",
 		},
 	},
 	{
@@ -80,11 +80,11 @@ export const projectsCards = [
 		leyend: "Proyect",
 		span: "Responsive",
 		url: "https://app-list-task.vercel.app/",
-		img: "../../img/todolist.png",
+		img: "/public/img/todolist.png",
 		icons: {
-			html: "../../img/html.svg",
-			sass: "../../img/sass.svg",
-			js: "../../img/javascript.svg",
+			html: "/public/img/html.svg",
+			sass: "/public/img/sass.svg",
+			js: "/public/img/javascript.svg",
 		},
 	},
 	{
@@ -93,9 +93,9 @@ export const projectsCards = [
 		leyend: "Proyect",
 		span: "Responsive",
 		url: "https://weather-app-six-eta-39.vercel.app/",
-		img: "../../img/weatherapp.png",
+		img: "/public/img/weatherapp.png",
 		icons: {
-			js: "../../img/react.svg",
+			js: "/public/img/react.svg",
 		},
 	},
 ];
