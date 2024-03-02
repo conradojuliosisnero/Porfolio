@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import "./nav.css";
 import { useState } from "react";
+import DarkModeSwitch from "./Swich";
 
 function Nav() {
-	const Menu = "../../img/menu.svg";
+  const Menu = "../../img/menu.svg";
 
-	//Nav-menu
-	const optionsMenu = [
+  //Nav-menu
+  const optionsMenu = [
     { id: 1, name: "Home", link: "/" },
     { id: 2, name: "About", link: "/Aboutme" },
     { id: 3, name: "Skills", link: "/Skills" },
@@ -16,39 +17,40 @@ function Nav() {
     // { id: 5, name: "Contact", link: "/Contact" }
   ];
 
-	const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(false);
 
-	const handelMenu = () => {
-		setMenu(!menu);
-	};
+  const handelMenu = () => {
+    setMenu(!menu);
+  };
 
-	return (
-		<nav className="navegador" id="home">
-			<div className="Responsive__menu">
-				<img
-					className={`menu__responsive ${menu ? "active" : ""}`}
-					src={Menu}
-					alt="Svg Menu"
-					onClick={handelMenu}
-				/>
-			</div>
-			<ul className={`menu ${menu ? "menu__active" : ""}`}>
-				<img
-					src="../../img/close.svg"
-					alt="Close svg"
-					className={`close__responsive ${menu ? "active__close" : ""}`}
-					onClick={handelMenu}
-				/>
-				{optionsMenu.map((option) => (
-					<li className="lista" key={option.id}>
-						<Link className="enlaces" to={option.link}>
-							{option.name}
-						</Link>
-					</li>
-				))}
-			</ul>
-		</nav>
-	);
+  return (
+    <nav className="navegador" id="home">
+      <div className="Responsive__menu">
+        <img
+          className={`menu__responsive ${menu ? "active" : ""}`}
+          src={Menu}
+          alt="Svg Menu"
+          onClick={handelMenu}
+        />
+      </div>
+      <ul className={`menu ${menu ? "menu__active" : ""}`}>
+        <img
+          src="../../img/close.svg"
+          alt="Close svg"
+          className={`close__responsive ${menu ? "active__close" : ""}`}
+          onClick={handelMenu}
+        />
+        {optionsMenu.map((option) => (
+          <li className="lista" key={option.id}>
+            <Link className="enlaces" to={option.link}>
+              {option.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <DarkModeSwitch />
+    </nav>
+  );
 }
 
 export default Nav;

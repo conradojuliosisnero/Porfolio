@@ -6,7 +6,6 @@ export default function FormNewProject() {
   // Estados de select y inputs
   const [Tecnologys, setTecnologys] = useState({
     name_project: "",
-    project_url: "",
     image_url: "",
     repo_url: "",
   });
@@ -37,9 +36,24 @@ export default function FormNewProject() {
 
   // inputs
   const inputs = [
-    { id: 1, name: "name_project", label: "Nombre del Proyecto" },
-    { id: 2, name: "repo_url", label: "Url del repositorio" },
-    { id: 3, name: "image_url", label: "Url de Imagen" },
+    {
+      id: 1,
+      name: "name_project",
+      label: "Nombre del Proyecto",
+      placeholder: "Nombre del Proyecto",
+    },
+    {
+      id: 2,
+      name: "repo_url",
+      label: "Url del repositorio",
+      placeholder: "Url del repositorio",
+    },
+    {
+      id: 3,
+      name: "image_url",
+      label: "Url de Imagen",
+      placeholder: "Url de Imagen",
+    },
   ];
 
   // Manejador de selects
@@ -59,7 +73,7 @@ export default function FormNewProject() {
   const HandlerSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:3001/projects", {
+      const response = await fetch("http://localhost:3000/projects", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,47 +92,70 @@ export default function FormNewProject() {
   };
 
   return (
-    <form className={styles.form_box}>
-      {/* input  */}
-      <div className="">
-        {inputs.map(({ id, name, label }) => (
-          <div className="" key={id}>
-            <label htmlFor="">{label}</label>
-            <input onChange={HandlerTecnologys} name={name} type="text" />
-          </div>
-        ))}
-      </div>
-      {/* select  */}
-      <div className="input_box">
-        <label htmlFor="">Tecnologias Frontend Usadas</label>
-        <Select
-          onChange={HandlerSelectInfo}
-          name="Tecnologias_Frontend_Usadas"
-          defaultValue={[tecOptionsFront[0]]}
-          isMulti
-          options={tecOptionsFront}
-          className="basic-multi-select"
-          classNamePrefix="select"
-        />
-      </div>
-      {/* select  */}
-      <div className="input_box">
-        <label htmlFor="">Tecnologias Backend Usadas</label>
-        <Select
-          onChange={HandlerSelectInfo}
-          name="Tecnologias_Backend_Usadas"
-          defaultValue={[tecOptionsBack[4]]}
-          isMulti
-          options={tecOptionsBack}
-          className="basic-multi-select"
-          classNamePrefix="select"
-        />
-      </div>
-      <div className="input_box_button">
-        <button onClick={HandlerSubmit} className="" type="submit">
-          Agegar Proyecto
-        </button>
-      </div>
-    </form>
+    <div className={styles.form_box}>
+      <form className={styles.formContend}>
+        {/* input  */}
+        <div className={styles.form_contend_input}>
+          {inputs.map(({ id, name, label, placeholder }) => (
+            <div className={styles.inputContainer} key={id}>
+              <input
+                onChange={HandlerTecnologys}
+                placeholder={placeholder}
+                name={name}
+                className={styles.inputField}
+                type="text"
+                autoComplete="off"
+              />
+              <label htmlFor="input-field" className={styles.inputLabel}>
+                {label}
+              </label>
+              <span className={styles.inputHighlight}></span>
+            </div>
+          ))}
+        </div>
+        {/* select  */}
+        <div className={styles.selectBox}>
+          <label className={styles.labelSelect}>
+            Tecnologias Frontend Usadas
+          </label>
+          <Select
+            onChange={HandlerSelectInfo}
+            name="Tecnologias_Frontend_Usadas"
+            defaultValue={[tecOptionsFront[0]]}
+            isMulti
+            options={tecOptionsFront}
+            className="basic-multi-select"
+            classNamePrefix="select"
+          />
+        </div>
+        {/* select  */}
+        <div className={styles.selectBox}>
+          <label className={styles.labelSelect}>
+            Tecnologias Backend Usadas
+          </label>
+          <Select
+            id="Tecnologias_Backend_Usadas"
+            onChange={HandlerSelectInfo}
+            name="Tecnologias_Backend_Usadas"
+            defaultValue={[tecOptionsBack[4]]}
+            isMulti
+            options={tecOptionsBack}
+            className="basic-multi-select"
+            classNamePrefix="select"
+          />
+        </div>
+
+        {/* button  */}
+        <div className={styles.boxButton}>
+          <button
+            onClick={HandlerSubmit}
+            className={styles.button}
+            type="submit"
+          >
+            Agregar Proyecto
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }

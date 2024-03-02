@@ -1,0 +1,53 @@
+/* DarkModeSwitch.module.css */
+.ToggleSwitch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  right: 50px;
+}
+
+@media (max-width: 720px) {
+  .ToggleSwitch {
+    right: 20px;
+    margin: 15px 0px 0px 0px;
+  }
+}
+
+.Slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.Slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.Input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Input:checked + .Slider {
+  background-color: #2277ff;
+}
+
+.Input:checked + .Slider::before {
+  transform: translateX(26px);
+}
