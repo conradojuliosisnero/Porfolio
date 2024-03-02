@@ -1,0 +1,15 @@
+.form_box{
+    background-color: #ffffff;
+    border: solid black 1px;
+    border-radius: .5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_input{
+    background-color: #ffffff;
+    border: solid #000000 2px;
+    border-radius: .5em;
+}
