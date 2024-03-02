@@ -38,7 +38,18 @@ span {
   border-radius: 0.5em;
 }
 
-button {
+/*------------------ button --------------- */
+
+.buttonBoxEdit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonBoxDelete {
+}
+
+.buttonEdit {
   padding: 15px 30px;
   border-radius: 10px;
   border: 0;
@@ -51,14 +62,39 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.buttonEdit:hover {
   box-shadow: rgb(36, 162, 99) 0px 7px 0px 0px;
 }
 
-button:active {
-  background-color: rgb(255, 56, 86);
+.buttonEdit:active {
+  background-color: rgb(54, 255, 57);
   /*50, 168, 80*/
-  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+  box-shadow: rgb(36, 167, 38) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
+}
+
+.buttonDelete {
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(255, 56, 86);
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  transition: box-shadow 300ms ease;
+  box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.buttonDelete:hover {
+  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+}
+
+.buttonDelete:active {
+  background-color: rgb(205, 24, 51);
+  /*50, 168, 80*/
+  box-shadow: rgb(197, 6, 35) 0px 0px 0px 0px;
   transform: translateY(5px);
   transition: 200ms;
 }

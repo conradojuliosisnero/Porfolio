@@ -25,7 +25,6 @@ export default function ProjectView() {
   };
 
   //funcion para editar los proyectos
-
   const handlerUpdate = async () => {
     try {
       fetch("http://localhost:3001/projects", { method: "PUT" });
@@ -43,9 +42,14 @@ export default function ProjectView() {
           <div className={styles.cardProject} key={id}>
             <div className={styles.status}></div>
             <span className="">{name_project}</span>
-            <div>
-              <button className={styles.button} onClick={handlerUpdate}>
+            <div className={styles.buttonBoxEdit}>
+              <button className={styles.buttonEdit} onClick={handlerUpdate}>
                 Editar
+              </button>
+            </div>
+            <div className={styles.buttonBoxDelete}>
+              <button className={styles.buttonDelete}>
+                Eliminar
               </button>
             </div>
           </div>
