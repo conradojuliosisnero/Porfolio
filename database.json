@@ -1,67 +1,108 @@
 {
-  "projects": [
+  "cardText": [
     {
-      "id": "e3a0",
-      "repo_url": "nombre",
-      "name_project": "shopy shop",
-      "image_url": "nose.com"
+      "TextProjects": "I have developed several projects listed below. Currently, these projects are static, but I am working on adding functionality to them using JavaScript."
+    }
+  ],
+  "projectsCards": [
+    {
+      "id": 1,
+      "img": "/public/img/card.jpg",
+      "name": "Card Music",
+      "url": "https://github.com/conradojuliosisnero/card-shop-music",
+      "leyend": "Card",
+      "span": "Responsive",
+      "icons": { "html": "../../img/html.svg", "sass": "../../img/sass.svg" }
     },
     {
-      "id": "5a5c",
-      "name_project": "shopy shop",
-      "project_url": "",
-      "image_url": "nose.com",
-      "repo_url": "nombre"
+      "id": 2,
+      "name": "Componente QR",
+      "leyend": "Card",
+      "span": "Responsive",
+      "url": "https://github.com/conradojuliosisnero/QR-card",
+      "img": "/public/img/qrcomponet.jpg",
+      "icons": { "html": "../../img/html.svg", "sass": "../../img/sass.svg" }
     },
     {
-      "0": {
-        "value": "Html",
-        "label": "Html"
-      },
-      "1": {
-        "value": "Css",
-        "label": "Css"
-      },
-      "2": {
-        "value": "JavaScript",
-        "label": "JavaScript"
-      },
-      "3": {
-        "value": "React",
-        "label": "React"
-      },
-      "4": {
-        "value": "Sass",
-        "label": "Sass"
-      },
-      "id": "1358",
-      "name_project": "shopy shop 2",
-      "project_url": "",
-      "image_url": "no aplica",
-      "repo_url": "no aplica"
+      "id": 3,
+      "name": "Card Result",
+      "leyend": "Card",
+      "span": "Responsive",
+      "url": "https://github.com/conradojuliosisnero/card-results",
+      "img": "../../img/resultados.jpg",
+      "icons": { "html": "../../img/html.svg", "sass": "../../img/sass.svg" }
     },
     {
-      "0": {
-        "value": "Html",
-        "label": "Html"
-      },
-      "1": {
-        "value": "Css",
-        "label": "Css"
-      },
-      "2": {
-        "value": "React",
-        "label": "React"
-      },
-      "3": {
-        "value": "Sass",
-        "label": "Sass"
-      },
-      "id": "381e",
-      "name_project": "shopy tienda",
-      "project_url": "",
-      "image_url": "no aplica",
-      "repo_url": "no aplica"
+      "id": 4,
+      "name": "Card Shop",
+      "leyend": "Card",
+      "span": "Responsive",
+      "url": "https://github.com/conradojuliosisnero/card-shop",
+      "img": "/public/img/cardshop.png",
+      "icons": { "html": "../../img/html.svg", "sass": "../../img/sass.svg" }
+    },
+    {
+      "id": 5,
+      "name": "Encriptador de Texto",
+      "leyend": "Proyect",
+      "span": "Responsive",
+      "url": "https://conradojuliosisnero.github.io/encriptador/",
+      "img": "/public/img/encriptador.png",
+      "icons": {
+        "html": "../../img/html.svg",
+        "sass": "../../img/sass.svg",
+        "js": "../../img/javascript.svg"
+      }
+    },
+    {
+      "id": 6,
+      "name": "App Task",
+      "leyend": "Proyect",
+      "url": "https://apptasksite.000webhostapp.com/app-tareas/task.php",
+      "img": "/public/img/app-task.png",
+      "icons": {
+        "html": "/public/img/html.svg",
+        "css": "/public/img/css.svg",
+        "php": "/public/img/php.svg",
+        "sql": "/public/img/sql.svg"
+      }
+    },
+    {
+      "id": 7,
+      "name": "App Movies",
+      "leyend": "Proyect",
+      "span": "Responsive",
+      "url": "https://moviescon.vercel.app/",
+      "img": "/public/img/app-movies.png",
+      "icons": {
+        "html": "/public/img/html.svg",
+        "css": "/public/img/css.svg",
+        "js": "/public/img/javascript.svg"
+      }
+    },
+    {
+      "id": 8,
+      "name": "To do List",
+      "leyend": "Proyect",
+      "span": "Responsive",
+      "url": "https://app-list-task.vercel.app/",
+      "img": "/public/img/todolist.png",
+      "icons": {
+        "html": "/public/img/html.svg",
+        "sass": "/public/img/sass.svg",
+        "js": "/public/img/javascript.svg"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Weather App",
+      "leyend": "Proyect",
+      "span": "Responsive",
+      "url": "https://weather-app-six-eta-39.vercel.app/",
+      "img": "/public/img/weatherapp.png",
+      "icons": {
+        "js": "/public/img/react.svg"
+      }
     }
   ]
 }

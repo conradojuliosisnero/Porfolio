@@ -8,6 +8,11 @@
   font-weight: 700;
 }
 
+.projectName {
+  text-decoration: none;
+  color: rgb(61, 61, 61);
+}
+
 .projectContend {
   display: flex;
   align-items: center;
