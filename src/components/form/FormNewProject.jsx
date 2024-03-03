@@ -1,65 +1,60 @@
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import Select from "react-select";
 import styles from "./form.module.css";
 
 export default function FormNewProject() {
   // Estados de select y inputs
   const [Tecnologys, setTecnologys] = useState({
-    name_project: "",
-    image_url: "",
-    repo_url: "",
+    name: "",
+    leyend: "Proyect",
+    url: "",
+    img: "",
   });
-  const [SelectInfo, setSelectInfo] = useState(null);
+  const [SelectInfoFrontend, setSelectInfoFrontend] = useState([]);
+  const [SelectInfoBackend, setSelectInfoBackend] = useState([]);
+  const [FormDataInputs, setFormDataInputs] = useState([]);
 
-  // Opciones Front de react select
-  const tecOptionsFront = [
-    { value: "Html", label: "Html" },
-    { value: "Css", label: "Css" },
-    { value: "JavaScript", label: "JavaScript" },
-    { value: "Sass", label: "Sass" },
-    { value: "React", label: "React" },
-    { value: "Tailwind", label: "Tailwind" },
-    { value: "Booststrap", label: "Booststrap" },
-    { value: "Next.js", label: "Next.js" },
-  ];
+  useEffect(() => {
+    getDataForm
+  }, [FormDataInputs])
+  
 
-  // Opciones Backend react select
-  const tecOptionsBack = [
-    { value: "Python", label: "Python" },
-    { value: "SQL", label: "SQL" },
-    { value: "JAVA", label: "JAVA" },
-    { value: "PHP", label: "Sass" },
-    { value: "JSON-SERVER", label: "JSON-SERVER" },
-    { value: "Express", label: "Express" },
-    { value: "TypeScript", label: "TypeScript" },
-  ];
+  // data de inputs y selects
+  const getDataForm = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/FormData");
+      if (response.status === 200) {
+        const { tecOptionsFront, tecOptionsBack, inputs } =
+          await response.json();
+        setFormDataInputs(data);
+      } else {
+        console.log("algo salio mal al obtener los datos");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  // inputs
-  const inputs = [
-    {
-      id: 1,
-      name: "name_project",
-      label: "Nombre del Proyecto",
-      placeholder: "Nombre del Proyecto",
-    },
-    {
-      id: 2,
-      name: "repo_url",
-      label: "Url del repositorio",
-      placeholder: "Url del repositorio",
-    },
-    {
-      id: 3,
-      name: "image_url",
-      label: "Url de Imagen",
-      placeholder: "Url de Imagen",
-    },
-  ];
+  // Manejador de selects front
+  const HandlerSelectInfoFront = (selectOption) => {
+    setSelectInfoFrontend(selectOption);
+    if (Array.isArray(selectOption)) {
+      const captureValues = {
+        tec_front: selectOption.map((item) => item.value),
+      };
+      console.log(captureValues);
+    } else {
+      console.error("SelectInfoFrontend no es un array:", selectOption);
+    }
+  };
 
-  // Manejador de selects
-  const HandlerSelectInfo = (selectOption) => {
-    setSelectInfo(selectOption);
-    console.log(selectOption);
+  // Manejador de selects back
+  const HandlerSelectInfoBack = (selectOption) => {
+    setSelectInfoBackend(selectOption);
+    const captureValues = {
+      tec_back: SelectInfoBackend.map((item) => item.value),
+    };
+    console.log(captureValues);
   };
 
   // Estado de inputs
@@ -78,7 +73,11 @@ export default function FormNewProject() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...Tecnologys, ...SelectInfo }),
+        body: JSON.stringify({
+          ...Tecnologys,
+          ...SelectInfoFrontend,
+          ...SelectInfoBackend,
+        }),
       });
       if (!response.ok) {
         throw new Error("Fallo al agregar la data");
@@ -96,7 +95,7 @@ export default function FormNewProject() {
       <form className={styles.formContend}>
         {/* input  */}
         <div className={styles.form_contend_input}>
-          {inputs.map(({ id, name, label, placeholder }) => (
+          {FormDataInputs.map(({ id, name, label, placeholder }) => (
             <div className={styles.inputContainer} key={id}>
               <input
                 onChange={HandlerTecnologys}
@@ -119,11 +118,11 @@ export default function FormNewProject() {
             Tecnologias Frontend Usadas
           </label>
           <Select
-            onChange={HandlerSelectInfo}
+            onChange={HandlerSelectInfoFront}
             name="Tecnologias_Frontend_Usadas"
-            defaultValue={[tecOptionsFront[0]]}
+            defaultValue={[FormDataInputs[0]]}
             isMulti
-            options={tecOptionsFront}
+            options={FormDataInputs}
             className="basic-multi-select"
             classNamePrefix="select"
           />
@@ -135,11 +134,11 @@ export default function FormNewProject() {
           </label>
           <Select
             id="Tecnologias_Backend_Usadas"
-            onChange={HandlerSelectInfo}
+            onChange={HandlerSelectInfoBack}
             name="Tecnologias_Backend_Usadas"
-            defaultValue={[tecOptionsBack[4]]}
+            defaultValue={[FormDataInputs[4]]}
             isMulti
-            options={tecOptionsBack}
+            options={FormDataInputs}
             className="basic-multi-select"
             classNamePrefix="select"
           />
