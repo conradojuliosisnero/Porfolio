@@ -1,7 +1,7 @@
 export const projectsCards = [
 	{
 		id: 1,
-		img: "/public/img/card.jpg",
+		img: "../../../public/img/card.jpg",
 		name: "Card Music",
 		url: "https://github.com/conradojuliosisnero/card-shop-music",
 		leyend: "Card",

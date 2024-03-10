@@ -10,8 +10,10 @@ export default function Proyectos() {
 
   const GetProjects = async () => {
     try {
-      const response = await fetch("http://localhost:3000/projectsCards");
-      if (response.status === 200) {
+      const response = await fetch(
+        "https://65e20329a8583365b317cabe.mockapi.io/projects/Projects"
+      );
+      if (response.status === 200) {  
         const data = await response.json();
         setGetProject(data);
       } else {

@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import "./nav.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DarkModeSwitch from "./Swich";
 
 function Nav() {
   const Menu = "../../img/menu.svg";
-
+  // estados del menu
+  const [menu, setMenu] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   //Nav-menu
   const optionsMenu = [
     { id: 1, name: "Home", link: "/" },
@@ -13,18 +15,34 @@ function Nav() {
     { id: 3, name: "Skills", link: "/Skills" },
     { id: 4, name: "Proyects", link: "/Projects" },
     // { id: 5, name: "Formulario", link: "/Form" },
-    // { id: 6, name: "Data Projects", link: "/projectdatabase" },
     // { id: 5, name: "Contact", link: "/Contact" }
   ];
 
-  const [menu, setMenu] = useState(false);
+  // duncion de darkMode
 
+  const handlerDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  // funcion menu
   const handelMenu = () => {
     setMenu(!menu);
   };
 
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("darkMode");
+      document.body.style.backgroundColor = "black";
+      document.body.style.color = "white";
+    } else {
+      document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
+      document.body.classList.remove("darkMode");
+    }
+  }, [darkMode]);
+
   return (
-    <nav className="navegador" id="home">
+    <nav className={`navegador ${darkMode ? "active-dark" : ""}`} id="home">
       <div className="Responsive__menu">
         <img
           className={`menu__responsive ${menu ? "active" : ""}`}
@@ -48,7 +66,7 @@ function Nav() {
           </li>
         ))}
       </ul>
-      <DarkModeSwitch />
+      <DarkModeSwitch darkMode={darkMode} onChange={handlerDarkMode} />
     </nav>
   );
 }
