@@ -1,4 +1,8 @@
 /* Estilos generales */
+.darkMode span {
+  color: #ffffff;
+}
+
 .navegador {
   width: 100%;
   height: 50px;
@@ -7,8 +11,16 @@
   padding: 40px 0px;
   display: flex;
   justify-content: center;
-  background-color: rgba(255, 255, 255);
+  background-color: #ffffff;
   align-items: center;
+}
+
+.active-dark {
+  background-color: transparent;
+}
+
+.active-dark .menu .lista .enlaces {
+  color: #ffffff;
 }
 
 /* Estilos del menú */
@@ -39,26 +51,25 @@
   color: #94f894;
 }
 
-.Responsive__menu{
+.Responsive__menu {
   display: none;
   opacity: 1;
 }
 
-.menu__responsive{
+.menu__responsive {
   transition: transform 300ms ease;
 }
 
-.close__responsive{
+.close__responsive {
   display: none;
 }
 
 @media screen and (max-width: 720px) {
-
-  .navegador{
+  .navegador {
     justify-content: flex-end;
   }
 
-  .menu{
+  .menu {
     position: fixed;
     right: -100%;
     top: 0;
@@ -66,12 +77,12 @@
     z-index: 100;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(0,0,0,.1);
+    background-color: rgb(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     transition: right 300ms ease;
   }
 
-  .menu__active{
+  .menu__active {
     right: 0;
     top: 0;
     max-width: 300px;
@@ -79,55 +90,50 @@
     flex-direction: column;
   }
 
-
-  .navegador .menu__active .enlaces{
+  .navegador .menu__active .enlaces {
     color: #383838;
     padding: 20px 0px;
     font-size: 1.5em;
   }
 
-  .Responsive__menu{
+  .Responsive__menu {
     width: 50px;
     height: 50px;
     display: flex;
     position: fixed;
-    left: 20px; 
+    left: 20px;
     cursor: pointer;
     margin: 15px 0px 0px 0px;
   }
 
-
   .Responsive__menu {
     position: absolute;
   }
-  
+
   .menu__responsive {
-    opacity: 1; 
-    transition: transform 300ms ease; 
+    opacity: 1;
+    transition: transform 300ms ease;
   }
-  
+
   .menu__responsive.active {
     opacity: 0;
     transform: rotate(360deg);
   }
-  
+
   .close__responsive {
     cursor: pointer;
     display: flex;
-    opacity: 0; 
+    opacity: 0;
     width: 50px;
     height: 50px;
     position: absolute;
     top: 20px;
     right: 20px;
-    transition: transform 300ms ease; 
+    transition: transform 300ms ease;
   }
-  
+
   .active__close {
     opacity: 1;
-    transform: rotate(180deg); 
+    transform: rotate(180deg);
   }
-  
-
 }
-

@@ -1,4 +1,4 @@
-import { useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
 import Select from "react-select";
 import styles from "./form.module.css";
 
@@ -12,20 +12,23 @@ export default function FormNewProject() {
   });
   const [SelectInfoFrontend, setSelectInfoFrontend] = useState([]);
   const [SelectInfoBackend, setSelectInfoBackend] = useState([]);
-  const [FormDataInputs, setFormDataInputs] = useState([]);
 
+  // opciones traidas del sever
+  const [formDataInputs, setFormDataInputs] = useState({});
+
+  console.log(formDataInputs[0]);
+
+  //efecto espues de montar la data
   useEffect(() => {
-    getDataForm
-  }, [FormDataInputs])
-  
+    getDataForm();
+  }, []);
 
   // data de inputs y selects
   const getDataForm = async () => {
     try {
       const response = await fetch("http://localhost:3000/FormData");
       if (response.status === 200) {
-        const { tecOptionsFront, tecOptionsBack, inputs } =
-          await response.json();
+        const data = await response.json();
         setFormDataInputs(data);
       } else {
         console.log("algo salio mal al obtener los datos");
@@ -95,22 +98,23 @@ export default function FormNewProject() {
       <form className={styles.formContend}>
         {/* input  */}
         <div className={styles.form_contend_input}>
-          {FormDataInputs.map(({ id, name, label, placeholder }) => (
-            <div className={styles.inputContainer} key={id}>
-              <input
-                onChange={HandlerTecnologys}
-                placeholder={placeholder}
-                name={name}
-                className={styles.inputField}
-                type="text"
-                autoComplete="off"
-              />
-              <label htmlFor="input-field" className={styles.inputLabel}>
-                {label}
-              </label>
-              <span className={styles.inputHighlight}></span>
-            </div>
-          ))}
+          {/* {formDataInputs[2].inputs[0].name?.map(
+            ({ id, name, label, placeholder }) => (
+              <div className={styles.inputContainer} key={id}>
+                <input
+                  onChange={HandlerTecnologys}
+                  placeholder={placeholder}
+                  name={name}
+                  className={styles.inputField}
+                  type="text"
+                />
+                <label htmlFor="input-field" className={styles.inputLabel}>
+                  {label}
+                </label>
+                <span className={styles.inputHighlight}></span>
+              </div>
+            )
+          )} */}
         </div>
         {/* select  */}
         <div className={styles.selectBox}>
@@ -120,9 +124,9 @@ export default function FormNewProject() {
           <Select
             onChange={HandlerSelectInfoFront}
             name="Tecnologias_Frontend_Usadas"
-            defaultValue={[FormDataInputs[0]]}
+            defaultValue={[formDataInputs[0]]}
             isMulti
-            options={FormDataInputs}
+            options={formDataInputs}
             className="basic-multi-select"
             classNamePrefix="select"
           />
@@ -136,9 +140,9 @@ export default function FormNewProject() {
             id="Tecnologias_Backend_Usadas"
             onChange={HandlerSelectInfoBack}
             name="Tecnologias_Backend_Usadas"
-            defaultValue={[FormDataInputs[4]]}
+            defaultValue={[formDataInputs[4]]}
             isMulti
-            options={FormDataInputs}
+            options={formDataInputs}
             className="basic-multi-select"
             classNamePrefix="select"
           />
