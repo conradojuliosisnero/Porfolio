@@ -12,8 +12,8 @@ function Nav() {
     { id: 2, name: "About", link: "/Aboutme" },
     { id: 3, name: "Skills", link: "/Skills" },
     { id: 4, name: "Proyects", link: "/Projects" },
-    { id: 5, name: "Formulario", link: "/Form" },
-    { id: 6, name: "Data Projects", link: "/projectdatabase" },
+    // { id: 5, name: "Formulario", link: "/Form" },
+    // { id: 6, name: "Data Projects", link: "/projectdatabase" },
     // { id: 5, name: "Contact", link: "/Contact" }
   ];
 
