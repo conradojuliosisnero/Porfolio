@@ -32,7 +32,7 @@ function Nav() {
   useEffect(() => {
     if (darkMode) {
       document.body.classList.add("darkMode");
-      document.body.style.backgroundColor = "black";
+      document.body.style.backgroundColor = "#141414";
       document.body.style.color = "white";
     } else {
       document.body.style.backgroundColor = "white";
