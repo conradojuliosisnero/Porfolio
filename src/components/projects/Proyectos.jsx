@@ -50,12 +50,7 @@ export default function Proyectos() {
             url,
             leyend,
             span,
-            html,
-            css,
-            js,
-            sass,
-            php,
-            sql,
+            icons
           }) => (
             <div className="card" id="app_movies" key={id}>
               <div className="contend__img">
@@ -69,12 +64,12 @@ export default function Proyectos() {
                 <div className="iconos__card">
                   <span>{span}</span>
                   <div className="icon">
-                    <img src={html} />
-                    <img src={css} />
-                    <img src={sass} />
-                    <img src={js} />
-                    <img src={php} />
-                    <img src={sql} />
+                    <img src={icons.html} />
+                    <img src={icons.css} />
+                    <img src={icons.sass} />
+                    <img src={icons.js} />
+                    <img src={icons.php} />
+                    <img src={icons.sql} />
                   </div>
                 </div>
               </div>

@@ -6,7 +6,7 @@ export const projectsCards = [
 		url: "https://github.com/conradojuliosisnero/card-shop-music",
 		leyend: "Card",
 		span: "Responsive",
-		icons: { html: "../../img/html.svg", sass: "../../img/sass.svg" },
+		icons: { html: "/img/html.svg", sass: "../../img/sass.svg" },
 	},
 	{
 		id: 2,
