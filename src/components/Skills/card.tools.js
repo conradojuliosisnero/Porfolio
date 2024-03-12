@@ -2,36 +2,36 @@ export const CardTools = [
 	{
 		id: 1,
 		tittle: "vsCode",
-		img: "../../img/vscode.svg",
+		img: "/assets/vscode.svg",
 	},
 	{
 		id: 2,
 		tittle: "Figma",
-		img: "../../img/figma.svg",
+		img: "/assets/figma.svg",
 	},
 	{
 		id: 3,
 		tittle: "AdobeXD",
-		img: "../../img/adobexd.svg",
+		img: "/assets/adobexd.svg",
 	},
 	{
 		id: 4,
 		tittle: "Woocomerce",
-		img: "../../img/woocommerce.svg",
+		img: "/assets/woocommerce.svg",
 	},
 	{
 		id: 5,
 		tittle: "Elementor",
-		img: "../../img/elementor.svg",
+		img: "/assets/elementor.svg",
 	},
 	{
 		id: 6,
 		tittle: "Photoshop",
-		img: "../../img/photoshop.svg",
+		img: "/assets/photoshop.svg",
 	},
 	{
 		id: 7,
 		tittle: "Xampp",
-		img: "../../img/xampp.svg",
+		img: "/assets/xampp.svg",
 	},
 ];

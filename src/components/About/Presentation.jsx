@@ -4,25 +4,25 @@ import Photo from "./Photo";
 
 function Presentation() {
 	const LinkRedes = [
-		{
-			id: 1,
-			link: "https://www.linkedin.com/in/julio-conrado-358b09242/",
-			img: "../img/linkedin.svg",
-			alt: "linkedin",
-		},
-		{
-			id: 2,
-			link: "https://www.instagram.com/conradojulio17/",
-			img: "../img/instagram.svg",
-			alt: "instagram",
-		},
-		{
-			id: 3,
-			link: "https://github.com/conradojuliosisnero",
-			img: "../img/git.svg",
-			alt: "git",
-		},
-	];
+    {
+      id: 1,
+      link: "https://www.linkedin.com/in/julio-conrado-358b09242/",
+      img: "/assets/linkedin.svg",
+      alt: "linkedin",
+    },
+    {
+      id: 2,
+      link: "https://www.instagram.com/conradojulio17/",
+      img: "/assets/instagram.svg",
+      alt: "instagram",
+    },
+    {
+      id: 3,
+      link: "https://github.com/conradojuliosisnero",
+      img: "/assets/git.svg",
+      alt: "git",
+    },
+  ];
 
 	return (
 		<div className="contenido__principal">
