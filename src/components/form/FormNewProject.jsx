@@ -16,8 +16,6 @@ export default function FormNewProject() {
   // opciones traidas del sever
   const [formDataInputs, setFormDataInputs] = useState({});
 
-  console.log(formDataInputs[0]);
-
   //efecto espues de montar la data
   useEffect(() => {
     getDataForm();

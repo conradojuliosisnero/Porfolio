@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import "./nav.css";
+import closeMenuResponsive from "../../../public/assets/close.svg";
+import openMenuResponsive from "../../../public/assets/menu.svg";
 import { useState, useEffect } from "react";
 import DarkModeSwitch from "./Swich";
 
 function Nav() {
-  const Menu = "../../img/menu.svg";
   // estados del menu
   const [menu, setMenu] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
@@ -46,14 +47,14 @@ function Nav() {
       <div className="Responsive__menu">
         <img
           className={`menu__responsive ${menu ? "active" : ""}`}
-          src={Menu}
+          src={openMenuResponsive}
           alt="Svg Menu"
           onClick={handelMenu}
         />
       </div>
       <ul className={`menu ${menu ? "menu__active" : ""}`}>
         <img
-          src="../../img/close.svg"
+          src={closeMenuResponsive}
           alt="Close svg"
           className={`close__responsive ${menu ? "active__close" : ""}`}
           onClick={handelMenu}
