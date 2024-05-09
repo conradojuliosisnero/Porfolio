@@ -1,74 +1,97 @@
 import { useState, useEffect } from "react";
 import "./projects.css";
 
-export default function Proyectos() {
-  const [GetProject, setGetProject] = useState([]);
+export default function Projects() {
+  const [projects, setProjects] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    GetProjects();
+    fetchProjects();
   }, []);
 
-  const GetProjects = async () => {
+  const fetchProjects = async () => {
     try {
       const response = await fetch(
         "https://65e20329a8583365b317cabe.mockapi.io/projects/Projects"
       );
-      if (response.status === 200) {
+      if (response.ok) {
         const data = await response.json();
-        setGetProject(data);
+        setProjects(data);
       } else {
-        console.log("error al obtener la data");
+        setError("Error al obtener la data");
       }
     } catch (error) {
-      console.error(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <section className="seccion__proyectos" id="proyects">
+    <section className="seccion__proyectos" id="proyectos">
       <div className="contend__titulo"></div>
 
-      <section className="about__proyect">
-        <div className="about__contenido__proyect">
-          <div className="about__imagen__proyect scroll__img">
-            <span className="leyend">Projects</span>
+      <section className="about__proyecto">
+        <div className="about__contenido__proyecto">
+          <div className="about__imagen__proyecto scroll__img">
+            <span className="leyenda">Proyectos</span>
           </div>
-          <div className="about__texto__proyect">
-            {/* {GetProject.map((text) => (
-              <div className="texto" key={text.index}>{text.TextProjects}</div>
-            ))} */}
-          </div>
+          <div className="about__texto__proyecto"></div>
         </div>
       </section>
 
-      <div className="contend__cards-proyectos">
-        {GetProject?.map(({ id, name, img, url, leyend, span, icons }) => (
-          <div className="card" id="app_movies" key={id}>
-            <div className="contend__img">
-              <img src={img} alt={name} />
-            </div>
-            <div className="contenido">
-              <h3 className="titulo_card">
-                <a href={url}>{name}</a>
-              </h3>
-              <span className="leyenda__card">{leyend}</span>
-              <div className="iconos__card">
-                <span>{span}</span>
-                <div className="icon">
-                  <img src={icons.html} />
-                  <img src={icons.css} />
-                  <img src={icons.sass} />
-                  <img src={icons.js} />
-                  <img src={icons.react} />
-                  <img src={icons.python} />
-                  <img src={icons.php} />
-                  <img src={icons.sql} />
+      {loading && <p>Cargando...</p>}
+      {error && <p>{error}</p>}
+      {!loading && !error && (
+        <div className="contend__cards-proyectos">
+          {projects.map(({ id, name, img, url, leyenda, span, icons }) => (
+            <div className="card" id={`proyecto-${id}`} key={id}>
+              <div className="contend__img">
+                <img src={img} alt={name} />
+              </div>
+              <div className="contenido">
+                <h3 className="titulo_card">
+                  <a href={url}>{name}</a>
+                </h3>
+                <span className="leyenda__card">{leyenda}</span>
+                <div className="iconos__card">
+                  <span>{span}</span>
+                  <div className="icon">
+                    {icons.html && (
+                      <img src={icons.html} alt="HTML" />
+                    )}
+                    {icons.css && (
+                      <img src={icons.css} alt="CSS" />
+                    )}
+                    {icons.sass && (
+                      <img src={icons.sass} alt="SASS" />
+                    )}
+                    {icons.js && (
+                      <img src={icons.js} alt="JavaScript" />
+                    )}
+                    {icons.react && (
+                      <img src={icons.react} alt="React" />
+                    )}
+                    {icons.python && (
+                      <img src={icons.python} alt="Python" />
+                    )}
+                    {icons.Nextjs && (
+                      <img src={icons.Nextjs} alt="Next.js" />
+                    )}
+                    {icons.php && (
+                      <img src={icons.php} alt="PHP" />
+                    )}
+                    {icons.sql && (
+                      <img src={icons.sql} alt="SQL" />
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 }
