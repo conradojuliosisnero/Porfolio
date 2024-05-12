@@ -58,33 +58,16 @@ export default function Projects() {
                 <div className="iconos__card">
                   <span>{span}</span>
                   <div className="icon">
-                    {icons.html && (
-                      <img src={icons.html} alt="HTML" />
-                    )}
-                    {icons.css && (
-                      <img src={icons.css} alt="CSS" />
-                    )}
-                    {icons.sass && (
-                      <img src={icons.sass} alt="SASS" />
-                    )}
-                    {icons.js && (
-                      <img src={icons.js} alt="JavaScript" />
-                    )}
-                    {icons.react && (
-                      <img src={icons.react} alt="React" />
-                    )}
-                    {icons.python && (
-                      <img src={icons.python} alt="Python" />
-                    )}
-                    {icons.Nextjs && (
-                      <img src={icons.Nextjs} alt="Next.js" />
-                    )}
-                    {icons.php && (
-                      <img src={icons.php} alt="PHP" />
-                    )}
-                    {icons.sql && (
-                      <img src={icons.sql} alt="SQL" />
-                    )}
+                    {icons.html && <img src={icons.html} alt="HTML" />}
+                    {icons.css && <img src={icons.css} alt="CSS" />}
+                    {icons.sass && <img src={icons.sass} alt="SASS" />}
+                    {icons.js && <img src={icons.js} alt="JavaScript" />}
+                    {icons.react && <img src={icons.react} alt="React" />}
+                    {icons.Api && <img src={icons.Api} alt="Api" />}
+                    {icons.python && <img src={icons.python} alt="Python" />}
+                    {icons.Nextjs && <img src={icons.Nextjs} alt="Next.js" />}
+                    {icons.php && <img src={icons.php} alt="PHP" />}
+                    {icons.sql && <img src={icons.sql} alt="SQL" />}
                   </div>
                 </div>
               </div>

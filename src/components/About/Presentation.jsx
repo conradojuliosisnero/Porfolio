@@ -11,12 +11,6 @@ function Presentation() {
       alt: "linkedin",
     },
     {
-      id: 2,
-      link: "https://www.instagram.com/conradojulio17/",
-      img: "/assets/instagram.svg",
-      alt: "instagram",
-    },
-    {
       id: 3,
       link: "https://github.com/conradojuliosisnero",
       img: "/assets/git.svg",
