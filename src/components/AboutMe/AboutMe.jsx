@@ -17,7 +17,7 @@ function AboutMe() {
 			id: 1,
 			contend: "Year Experience",
 			class: "estadisticas__experiencia",
-			number: "1+",
+			number: "2+",
 		},
 		{
 			id: 2,
@@ -29,7 +29,7 @@ function AboutMe() {
 			id: 3,
 			contend: "Companies Worked",
 			class: "estadisticas__proyectos",
-			number: "1",
+			number: "2",
 		},
 	];
 
@@ -56,7 +56,7 @@ function AboutMe() {
 						))}
 					</div>
 					{/* boton de descargar cv  */}
-					<BtnCv />
+					{/* <BtnCv /> */}
 				</div>
 			</div>
 		</section>
