@@ -1,51 +1,33 @@
 import { useState, useEffect } from "react";
 import "./projects.css";
+import getProjects from "../../services/MockApi/projects";
 
 export default function Projects() {
-  const [projects, setProjects] = useState(null);
+  const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetchProjects();
-  }, []);
-
-  const fetchProjects = async () => {
-    try {
-      const response = await fetch(
-        "https://65e20329a8583365b317cabe.mockapi.io/projects/Projects"
-      );
-      if (response.ok) {
-        const data = await response.json();
-        setProjects(data);
-      } else {
-        setError("Error al obtener la data");
+    const getDataProjects = async () => {
+      try {
+        const data = await getProjects(setError, setProjects, setLoading);
+      } catch (error) {
+        console.error(error);
       }
-    } catch (error) {
-      setError(error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
+    getDataProjects();
+  }, []);
 
   return (
     <section className="seccion__proyectos" id="proyectos">
-      <div className="contend__titulo"></div>
-
-      <section className="about__proyecto">
-        <div className="about__contenido__proyecto">
-          <div className="about__imagen__proyecto scroll__img">
-            <span className="leyenda">Proyectos</span>
-          </div>
-          <div className="about__texto__proyecto"></div>
-        </div>
-      </section>
-
+      <div className="leyend__section">
+        <span className="leyenda__projects">Features Projects</span>
+      </div>
       {loading && <p>Cargando...</p>}
       {error && <p>{error}</p>}
       {!loading && !error && (
         <div className="contend__cards-proyectos">
-          {projects.map(({ id, name, img, url, leyenda, span, icons }) => (
+          {projects?.map(({ id, name, img, url, leyenda, span, icons }) => (
             <div className="card" id={`proyecto-${id}`} key={id}>
               <div className="contend__img">
                 <img src={img} alt={name} />
