@@ -2,17 +2,17 @@ export const CardTools = [
 	{
 		id: 1,
 		tittle: "vsCode",
-		img: "/assets/vscode.svg",
+		img: "/assets/icons-dark/vscode.svg",
 	},
 	{
 		id: 2,
 		tittle: "Figma",
-		img: "/assets/figma.svg",
+		img: "/assets/icons-dark/figma.svg",
 	},
 	{
 		id: 3,
 		tittle: "AdobeXD",
-		img: "/assets/adobexd.svg",
+		img: "/assets/icons-dark/adobexd.svg",
 	},
 	{
 		id: 4,
@@ -25,13 +25,8 @@ export const CardTools = [
 		img: "/assets/elementor.svg",
 	},
 	{
-		id: 6,
-		tittle: "Photoshop",
-		img: "/assets/photoshop.svg",
-	},
-	{
 		id: 7,
 		tittle: "Xampp",
-		img: "/assets/xampp.svg",
+		img: "/assets/icons-dark/xampp.svg",
 	},
 ];

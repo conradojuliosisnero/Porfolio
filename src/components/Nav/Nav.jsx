@@ -4,22 +4,15 @@ import closeMenuResponsive from "../../../public/assets/close.svg";
 import openMenuResponsive from "../../../public/assets/menu.svg";
 import { useState, useEffect } from "react";
 import DarkModeSwitch from "./Swich";
+import { optionsMenu } from "../../data/menu";
 
 function Nav() {
   // estados del menu
   const [menu, setMenu] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   //Nav-menu
-  const optionsMenu = [
-    { id: 1, name: "Home", link: "/" },
-    { id: 2, name: "About", link: "/Aboutme" },
-    { id: 3, name: "Skills", link: "/Skills" },
-    { id: 4, name: "Proyects", link: "/Projects" },
-    // { id: 5, name: "Formulario", link: "/Form" },
-    // { id: 5, name: "Contact", link: "/Contact" }
-  ];
 
-  // duncion de darkMode
+  // funcion de darkMode
 
   const handlerDarkMode = () => {
     setDarkMode(!darkMode);
@@ -52,6 +45,7 @@ function Nav() {
           onClick={handelMenu}
         />
       </div>
+      <span className="icon__nav">Conrado Julio</span>
       <ul className={`menu ${menu ? "menu__active" : ""}`}>
         <img
           src={closeMenuResponsive}
@@ -67,7 +61,7 @@ function Nav() {
           </li>
         ))}
       </ul>
-      <DarkModeSwitch darkMode={darkMode} onChange={handlerDarkMode} />
+      {/* <DarkModeSwitch darkMode={darkMode} onChange={handlerDarkMode} /> */}
     </nav>
   );
 }
