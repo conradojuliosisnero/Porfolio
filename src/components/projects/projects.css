@@ -1,145 +1,153 @@
-/* Estilos base */
-body {
-	margin: 0;
-	font-family: Arial, sans-serif;
-	background-color: #f0f0f0;
-}
-
-/* Estilos para las imágenes */
-img {
-	max-width: 80%;
-	height: auto;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 /* Estilos para la sección de proyectos */
 .seccion__proyectos {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.seccion__proyectos .contend__titulo {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-.seccion__proyectos .contend__titulo .titulo {
-	font-size: 1.5em;
-	font-weight: 300;
-	padding: 20px 0px 0px 0px;
-}
-
-.seccion__proyectos .contend__cards-proyectos {
-	width: 700px;
-	display: grid;
-	justify-items: center;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-	padding-top: 30px; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .leyenda__projects{
 	font-size: 3em;
-	margin-top: 70px;
 	font-weight: 700;
-	justify-content: center;
-	color: #000000;
+	
+}
+
+.seccion__proyectos .contend__titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.seccion__proyectos .contend__titulo .titulo {
+  font-size: 1.5em;
+  font-weight: 300;
+  padding: 20px 0px 0px 0px;
+}
+
+.seccion__proyectos .contend__cards-proyectos {
+  width: 750px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin: 50px 0px 50px 0px;
+  gap: 15px;
+}
+
+/* //////////////////////////////////////////////////////////////////
+/////////////////////// PROJECTS CARD ///////////////////////////
+////////////////////////////////////////////////////////////////// */
+
+.wrapper__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 350px;
+  overflow: hidden;
+  background-color: rgba(231, 231, 231, 0.712);
+  -webkit-box-shadow: 4px 6px 19px 2px rgba(196, 191, 196, 0.41);
+  -moz-box-shadow: 4px 6px 19px 2px rgba(196, 191, 196, 0.41);
+  box-shadow: 4px 6px 19px 2px rgba(196, 191, 196, 0.41);
+  border-radius: 0.7em;
+}
+/* //////////////////////////////////////////////////////////////////
+/////////////////////// PROJECTS IMAGE /////////////////////////////
+////////////////////////////////////////////////////////////////// */
+
+.wrapper__img{
 	display: flex;
 	width: 100%;
+	height: 150px;
 }
 
-.seccion__proyectos .contend__cards-proyectos .card {
-	cursor: pointer;
-	position: relative;
-	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); 
-	width: 250px; 
-	height: 200px;
-	margin: 20px 10px;
-	border-radius: 15px;
-	border: solid white 2px;
-	overflow: hidden;
+.contend__card--img {
+  width: 100%;
+  margin: 10px 10px;
 }
 
-.seccion__proyectos .contend__cards-proyectos .card .contend__img {
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
+.contend__card--img img {
+  object-fit: cover;
+  border-radius: 0.4em;
+  width: 100%;
+  height: 100%;
+}
+/* //////////////////////////////////////////////////////////////////
+/////////////////////// PROJECTS DESCRIPTION ////////////////////////
+////////////////////////////////////////////////////////////////// */
+
+.card__description {
+  padding: 10px;
+  display: flex;
+  width: 100%;
 }
 
-.seccion__proyectos .contend__cards-proyectos .card .contend__img img {
-	min-width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
+.card__description p {
+  text-align: start;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
-.seccion__proyectos .contend__cards-proyectos .card .contenido {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	bottom: -500px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	backdrop-filter: blur(10px);
-	transition: bottom 300ms ease;
-	background-color: rgba(0, 0, 0, 0.13);
+/* //////////////////////////////////////////////////////////////////
+/////////////////////// PROJECTS NAME ///////////////////////////
+////////////////////////////////////////////////////////////////// */
+.wrapper__name {
+	background: #ffffff;
+  padding: 20px 10px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
-/* Estilos para el hover de las tarjetas */
-.seccion__proyectos .contend__cards-proyectos .card:hover .contenido {
-	bottom: 0;
-  }
-  
-
-.seccion__proyectos .contend__cards-proyectos .card .contenido a {
-	text-decoration: none;
-	font-size: 1.3em;
-	color: #ffff;
-	transition: color 300ms;
+.card__project--name {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  /* padding: 10px 20px; */
 }
 
-.seccion__proyectos .contend__cards-proyectos .card .contenido a:hover {
-	color: #6ede8aff;
-
+.name__project {
+  font-weight: 700;
+  text-decoration: none;
+  color: #000000;
 }
 
-.icon {
-	display: flex;
-	justify-content: center;
-	padding: 10px 0px 0px 0px;
+.name__project:hover {
+  color: #35b367;
 }
 
-.icon img {
-	margin: 0px 5px;
-	transition: transform 300ms ease;
-	max-width: 30px; /* Ajusta este valor según tu preferencia */
-	height: auto;
+/* //////////////////////////////////////////////////////////////////
+/////////////////////// PROJECTS STACK ///////////////////////////
+////////////////////////////////////////////////////////////////// */
+
+.card__project__stack {
+  width: 100%;
+  display: flex;
 }
 
-.icon img:hover {
-	transform: scale(1.5);
+.stack__icon {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  margin: 10px 20px;
 }
 
-/* Media Queries */
-
-/* Estilos para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-	.seccion__proyectos .contend__cards-proyectos {
-		justify-content: center; /* Centra la cuadrícula */
-	}
-	.seccion__proyectos .contend__cards-proyectos .card {
-		max-width: 300px; /* Ajusta este valor según tu preferencia */
-	}
+.stack__icon img {
+  width: 30px;
+  margin: 0px 10px;
+  transition: transform 200ms ease;
 }
 
-/* Estilos para pantallas muy pequeñas (por ejemplo, teléfonos) */
-@media screen and (max-width: 480px) {
-	.seccion__proyectos .contend__cards-proyectos .card {
-		max-width: 100%; /* Ocupará todo el ancho disponible */
-	}
+.stack__icon img:hover {
+	transform: scale(1.1);
 }

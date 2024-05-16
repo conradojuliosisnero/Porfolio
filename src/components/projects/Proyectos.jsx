@@ -27,19 +27,30 @@ export default function Projects() {
       {error && <p>{error}</p>}
       {!loading && !error && (
         <div className="contend__cards-proyectos">
-          {projects?.map(({ id, name, img, url, leyenda, span, icons }) => (
-            <div className="card" id={`proyecto-${id}`} key={id}>
-              <div className="contend__img">
-                <img src={img} alt={name} />
+          {projects?.map(({ id, name, img, url, icons }) => (
+            <div className="wrapper__card" key={id}>
+              <div className="wrapper__img">
+                {/* img projeect  */}
+                <div className="contend__card--img">
+                  <img src={img} alt={name} />
+                </div>
+                {/* description  */}
+                <div className="card__description">
+                  <p className="description__project">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
               </div>
-              <div className="contenido">
-                <h3 className="titulo_card">
-                  <a href={url}>{name}</a>
-                </h3>
-                <span className="leyenda__card">{leyenda}</span>
-                <div className="iconos__card">
-                  <span>{span}</span>
-                  <div className="icon">
+              <div className="wrapper__name">
+                {/* PROJECT NAME  */}
+                <div className="card__project--name">
+                  <a className="name__project" href={url}>
+                    {name}
+                  </a>
+                </div>
+                {/* stack icons  */}
+                <div className="card__project__stack">
+                  <div className="stack__icon">
                     {icons.html && <img src={icons.html} alt="HTML" />}
                     {icons.css && <img src={icons.css} alt="CSS" />}
                     {icons.sass && <img src={icons.sass} alt="SASS" />}
