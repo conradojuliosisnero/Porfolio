@@ -7,6 +7,7 @@
 /* Estilos para la sección de proyectos */
 .seccion__proyectos {
   width: 100%;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,6 +119,7 @@
 
 .name__project {
   font-weight: 700;
+  font-size: 1.2em;
   text-decoration: none;
   color: #000000;
 }
@@ -143,7 +145,7 @@
 }
 
 .stack__icon img {
-  width: 30px;
+  width: 1.7em;
   margin: 0px 10px;
   transition: transform 200ms ease;
 }

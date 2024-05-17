@@ -3,7 +3,7 @@ import { TextAbout, statistics } from "../../data/about";
 
 function AboutMe() {
   return (
-    <section className="about" id="about">
+    <section className="about" id="About">
       <div className="about__titulo scroll__titulo">
         <span className="titulo">About Me</span>
       </div>

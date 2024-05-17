@@ -1,5 +1,6 @@
 .contenido__principal {
 	padding: 0px 50px 0px 50px;
+	padding-top: 120px;
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-areas:

@@ -8,7 +8,7 @@ import { LinkRedes } from "../../data/social";
 
 function Home() {
   return (
-    <main>
+    <section className="home" id="Home">
       <div className="contenido__principal">
         <aside className="redes__sociales">
           {LinkRedes.map((social) => (
@@ -25,7 +25,7 @@ function Home() {
       <AboutMe />
       <Skills />
       <Projects/>
-    </main>
+    </section>
   );
 }
 

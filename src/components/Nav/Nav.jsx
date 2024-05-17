@@ -45,7 +45,9 @@ function Nav() {
           onClick={handelMenu}
         />
       </div>
-      <span className="icon__nav">Conrado Julio</span>
+      <a className="icon__nav" href="https://github.com/conradojuliosisnero">
+        Conrado Julio
+      </a>
       <ul className={`menu ${menu ? "menu__active" : ""}`}>
         <img
           src={closeMenuResponsive}
@@ -55,9 +57,9 @@ function Nav() {
         />
         {optionsMenu.map((option) => (
           <li className="lista" key={option.id}>
-            <Link className="enlaces" to={option.link}>
+            <a className="enlaces" href={`#${option.name}`}>
               {option.name}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
