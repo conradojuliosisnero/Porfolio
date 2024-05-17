@@ -1,6 +1,7 @@
 /* Sección de habilidades */
 .seccion__skills {
   width: 100%;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
 }

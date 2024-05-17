@@ -5,7 +5,7 @@ import Tools from "./Tools";
 
 function Skills() {
   return (
-    <section className="seccion__skills" id="skills">
+    <section className="seccion__skills" id="Skills">
         <div className="skill__titulo-contend scroll__titulo">
           <span className="leyend">Skills</span>
           <Icons />
