@@ -1,177 +1,142 @@
 /* caja principal */
 .about {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	padding-top: 80px;
-}
-
-/* título */
-.about__titulo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-
-.about__titulo .titulo {
-	font-size: 45px;
-	font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 150px;
 }
 
 /* caja de contenido de texto */
 .about__contenido {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-	padding: 25px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 25px 250px;
 }
 
-/* imagen del perfil */
-.about__contenido .about__imagen {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	padding: 0px 35px;
-	position: relative;
+/* título */
+.about__titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.about__contenido .about__imagen .imagen {
-	width: 350px;
-	object-fit: cover;
-}
-
-.about__contenido .about__imagen span {
-	position: absolute;
-	left: 150px;
-	bottom: 0;
-	color: #bbbbbb;
-	border: solid #777777 2px;
-	border-radius: 10px;
-	font-weight: 600;
-	padding: 20px 10px;
-	backdrop-filter: blur(10px);
+.about__titulo .titulo {
+  font-size: 3em;
+  font-weight: 700;
 }
 
 /* caja de texto */
 .about__contenido .about__texto {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	width: 40%;
-	height: 100%;
-	text-align: start;
-	flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about__contenido .about__texto .estadisticas{
+  display: flex;
+
 }
 
 .about__contenido .about__texto .texto {
-	text-align: start;
-	color: #777777;
-	width: 90%;
-	line-height: 25px;
+  text-align: start;
+  color: #777777;
+  width: 90%;
+  line-height: 25px;
 }
 
 /* botón para descargar CV */
 .about__contenido .about__texto .about__btn {
-	background-color: #94f894;
-	border-radius: 7px;
-	border: none;
-	padding: 15px 30px;
-	margin: 25px 0px;
-	position: relative;
-	cursor: pointer;
-	position: relative;
-	overflow: hidden;
-	transition: box-shadow 200ms ease;
+  background-color: #94f894;
+  border-radius: 7px;
+  border: none;
+  padding: 15px 30px;
+  margin: 25px 0px;
+  position: relative;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 200ms ease;
 }
 
 .about__contenido .about__texto .about__btn::after {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: -150px;
-	background-color: #72d672;
-	transition: top 350ms ease;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: -150px;
+  background-color: #72d672;
+  transition: top 350ms ease;
 }
 
 .about__contenido .about__texto .about__btn:hover::after {
-	top: 0;
+  top: 0;
 }
 
 .about__contenido .about__texto .about__btn span {
-	width: 100%;
-	position: relative;
-	z-index: 2;
+  width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .about__contenido .about__texto .about__btn span a {
-	color: #ffffff;
-	text-decoration: none;
-	font-size: 1.4em;
-	font-weight: 600;
-	position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.4em;
+  font-weight: 600;
+  position: relative;
 }
 
 .about__contenido .about__texto .about__btn:hover {
-	box-shadow: 0px 0px 15px 0px #4ad66dff, 0px 0px 25px 0px rgb(43, 145, 69);
-	background-color: #6ede8aff;
+  box-shadow: 0px 0px 15px 0px #4ad66dff, 0px 0px 25px 0px rgb(43, 145, 69);
+  background-color: #6ede8aff;
 }
 
 /* estadísticas */
 .about__contenido .estadisticas {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .about__contenido .estadisticas div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	text-align: center;
-	font-weight: 500;
-	padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 500;
+  padding: 20px 10px;
 }
 
 .about__contenido .estadisticas div span {
-	color: #b8b8b8;
+  color: #b8b8b8;
 }
 
 .about__contenido .estadisticas div .numero {
-	font-size: 25px;
-	font-weight: 900;
+  font-size: 25px;
+  font-weight: 900;
 }
 
 @media screen and (max-width: 768px) {
-	.about__titulo .titulo {
-	  font-size: 30px;
-	}
-  
-	.about__contenido {
-	  flex-direction: column;
-	}
-  
-	.about__contenido .about__imagen {
-	  padding: 0;
-	  text-align: center;
-	}
-  
-	.about__contenido .about__imagen .imagen {
-	  width: 70%;
-	}
-  
-	.about__contenido .about__texto {
-	  width: 80%;
-	}
+
+  .about__contenido{
+    width: 100%;
+    padding: 0px 50px;
+    margin: 0px 20px;
   }
-  
-  
+
+  .about__contenido .about__texto {
+    width: 100%;
+    padding: 20px 0px;
+  }
+}

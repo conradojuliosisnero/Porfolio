@@ -1,136 +1,168 @@
-/* Estilos base */
-body {
-	margin: 0;
-	font-family: Arial, sans-serif;
-	background-color: #f0f0f0;
-}
-
-/* Estilos para las imágenes */
-img {
-	max-width: 80%;
-	height: auto;
-}
-
 /* Estilos para la sección de proyectos */
 .seccion__proyectos {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	padding: 30px; /* Ajusta este valor según tu preferencia */
+  width: 100%;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.leyenda__projects{
+	font-size: 3em;
+	font-weight: 700;
+	
 }
 
 .seccion__proyectos .contend__titulo {
-	width: 100%;
-	display: flex;
-	justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .seccion__proyectos .contend__titulo .titulo {
-	font-size: 1.5em;
-	color: #ffffff;
-	font-weight: 300;
-	padding: 20px 0px 0px 0px;
+  font-size: 1.5em;
+  font-weight: 300;
+  padding: 20px 0px 0px 0px;
 }
 
 .seccion__proyectos .contend__cards-proyectos {
-	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 30px; /* Ajusta este valor según tu preferencia */
-	padding-top: 30px; /* Ajusta este valor según tu preferencia */
-	justify-items: center;
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  margin: 50px 0px 50px 0px;
+  gap: 15px;
 }
 
-.seccion__proyectos .contend__cards-proyectos .card {
-	cursor: pointer;
-	position: relative;
-	flex-direction: column;
-	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); /* Ajusta este valor según tu preferencia */
-	width: 100%;
-	max-width: 350px; /* Ajusta este valor según tu preferencia */
-	border-radius: 15px;
-	border: solid white 2px;
-	overflow: hidden;
+/* //////////////////////////////////////////////////////////////////
+/////////////////////// PROJECTS CARD ///////////////////////////
+////////////////////////////////////////////////////////////////// */
+
+.wrapper__card {
+  width: 350px;
+  border: solid .24em #a5a5a5;
+  margin: 0px 10px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background-color: rgba(231, 231, 231, 0.712);
+  -webkit-box-shadow: 4px 6px 19px 2px rgba(196, 191, 196, 0.41);
+  -moz-box-shadow: 4px 6px 19px 2px rgba(196, 191, 196, 0.41);
+  box-shadow: 4px 6px 19px 2px rgba(196, 191, 196, 0.41);
+  border-radius: 0.7em;
+  transition:transform 200ms ease-in-out ;
 }
 
-.seccion__proyectos .contend__cards-proyectos .card .contend__img {
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
+.wrapper__card:hover{
+ transform: scale(1.05);
+   -webkit-box-shadow: 4px 6px 19px 2px rgba(125, 125, 125, 0.41);
+  -moz-box-shadow: 4px 6px 19px 2px rgba(125, 125, 125, 0.41);
+  box-shadow: 4px 6px 19px 2px rgba(125, 125, 125, 0.41);
 }
+/* //////////////////////////////////////////////////////////////////
+/////////////////////// PROJECTS IMAGE /////////////////////////////
+////////////////////////////////////////////////////////////////// */
 
-.seccion__proyectos .contend__cards-proyectos .card .contend__img img {
-	min-width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
-}
-
-.seccion__proyectos .contend__cards-proyectos .card .contenido {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	bottom: -500px;
+.wrapper__img{
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	backdrop-filter: blur(10px);
-	transition: bottom 300ms ease;
-	background-color: rgba(0, 0, 0, 0.13);
+	width: 100%;
+	height: 150px;
 }
 
-/* Estilos para el hover de las tarjetas */
-.seccion__proyectos .contend__cards-proyectos .card:hover .contenido {
-	bottom: 0;
-  }
-  
-
-.seccion__proyectos .contend__cards-proyectos .card .contenido a {
-	text-decoration: none;
-	font-size: 1.3em;
-	color: #ffff;
-	transition: color 300ms;
+.contend__card--img {
+  width: 100%;
+  margin: 10px 10px;
 }
 
-.seccion__proyectos .contend__cards-proyectos .card .contenido a:hover {
-	color: #6ede8aff;
+.contend__card--img img {
+  object-fit: cover;
+  border-radius: 0.4em;
+  width: 100%;
+  height: 100%;
+}
+/* //////////////////////////////////////////////////////////////////
+/////////////////////// PROJECTS DESCRIPTION ////////////////////////
+////////////////////////////////////////////////////////////////// */
 
+.card__description {
+  padding: 10px;
+  display: flex;
+  width: 100%;
 }
 
-.icon {
-	display: flex;
-	justify-content: center;
-	padding: 10px 0px 0px 0px;
+.card__description p {
+  text-align: start;
+  display: flex;
+  width: 100%;
+  color: #8c8c8c;
+  justify-content: center;
 }
 
-.icon img {
-	margin: 0px 5px;
-	transition: transform 300ms ease;
-	max-width: 30px; /* Ajusta este valor según tu preferencia */
-	height: auto;
+/* //////////////////////////////////////////////////////////////////
+/////////////////////// PROJECTS NAME ///////////////////////////
+////////////////////////////////////////////////////////////////// */
+.wrapper__name {
+	background: #ffffff;
+  padding: 20px 10px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
-.icon img:hover {
-	transform: scale(1.5);
+.card__project--name {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  /* padding: 10px 20px; */
 }
 
-/* Media Queries */
+.name__project {
+  font-weight: 700;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #000000;
+}
 
-/* Estilos para pantallas pequeñas */
+.name__project:hover {
+  color: #35b367;
+}
+
+/* //////////////////////////////////////////////////////////////////
+/////////////////////// PROJECTS STACK ///////////////////////////
+////////////////////////////////////////////////////////////////// */
+
+.card__project__stack {
+  width: 100%;
+  display: flex;
+}
+
+.stack__icon {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  margin: 10px 20px;
+}
+
+.stack__icon img {
+  width: 1.7em;
+  margin: 0px 10px;
+  transition: transform 200ms ease;
+}
+
+.stack__icon img:hover {
+	transform: scale(1.1);
+}
+
 @media screen and (max-width: 768px) {
-	.seccion__proyectos .contend__cards-proyectos {
-		justify-content: center; /* Centra la cuadrícula */
-	}
-	.seccion__proyectos .contend__cards-proyectos .card {
-		max-width: 300px; /* Ajusta este valor según tu preferencia */
-	}
-}
+  .seccion__proyectos{
+    width: 100%;
+    display: flex;
+  }
+  .seccion__proyectos .contend__cards-proyectos {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 
-/* Estilos para pantallas muy pequeñas (por ejemplo, teléfonos) */
-@media screen and (max-width: 480px) {
-	.seccion__proyectos .contend__cards-proyectos .card {
-		max-width: 100%; /* Ocupará todo el ancho disponible */
-	}
+}
 }

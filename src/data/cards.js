@@ -4,7 +4,7 @@ export const Cards = [
     tittle: "HTML",
     cardtext: ` HTML (HyperText Markup Language): Es el lenguaje de marcado
         utilizado para estructurar y presentar el contenido en la web.`,
-    img: "/assets/html.svg",
+    img: "/assets/icons-dark/html.svg",
     url: "https://developer.mozilla.org/en-US/docs/Glossary/HTML5",
   },
   {
@@ -14,7 +14,7 @@ export const Cards = [
         describir la presentación y el diseño de un documento HTML. Se
         utiliza para dar estilo y personalidad a los elementos de una
         página web.`,
-    img: "/assets/css.svg",
+    img: "/assets/icons-dark/css.svg",
     url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
@@ -24,7 +24,7 @@ export const Cards = [
         CSS que extiende la funcionalidad de CSS permitiendo el uso de
         variables, mixins, funciones y otros elementos para facilitar el
         desarrollo y mantenimiento de estilos.`,
-    img: "/assets/sass.svg",
+    img: "/assets/icons-dark/sass.svg",
     url: "https://sass-lang.com/",
   },
   {
@@ -34,7 +34,7 @@ export const Cards = [
         agregar interactividad y funcionalidad a los sitios web. Permite
         realizar acciones en respuesta a eventos y manipular elementos de
         la página.`,
-    img: "/assets/javascript.svg",
+    img: "/assets/icons-dark/js.svg",
     url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
@@ -43,7 +43,7 @@ export const Cards = [
     cardtext: `React: Es una biblioteca de JavaScript para construir interfaces
         de usuario interactivas. Permite crear componentes reutilizables y
         manejar de manera eficiente el estado de una aplicación web.`,
-    img: "/assets/react.svg",
+    img: "/assets/icons-dark/react.svg",
     url: "https://legacy.reactjs.org/docs/getting-started.html",
   },
   {
@@ -52,7 +52,7 @@ export const Cards = [
     cardtext: `React: Es una biblioteca de JavaScript para construir interfaces
         de usuario interactivas. Permite crear componentes reutilizables y
         manejar de manera eficiente el estado de una aplicación web.`,
-    img: "/assets/next-dark.svg",
+    img: "/assets/icons-dark/next.svg",
     url: "https://legacy.reactjs.org/docs/getting-started.html",
   },
   {
@@ -61,7 +61,7 @@ export const Cards = [
     cardtext: ` Bootstrap: Es un framework de desarrollo web front-end que
         proporciona un conjunto de herramientas y estilos predefinidos
         para facilitar la creación rápida y responsiva de sitios web.`,
-    img: "/assets/bootstrap.svg",
+    img: "/assets/icons-dark/bootstrap.svg",
     url: "https://getbootstrap.com/",
   },
   {
@@ -71,7 +71,7 @@ export const Cards = [
         CSS predefinidas para acelerar el proceso de diseño y desarrollo.
         Permite crear interfaces personalizadas de manera rápida y
         eficiente.`,
-    img: "/assets/tailwind.svg",
+    img: "/assets/icons-dark/tailwind.svg",
     url: "https://tailwindcss.com/",
   },
   {
@@ -81,7 +81,7 @@ export const Cards = [
         administrar bases de datos relacionales. Permite realizar
         consultas, actualizaciones y manipulaciones de datos en una base
         de datos.`,
-    img: "/assets/sql.svg",
+    img: "/assets/icons-dark/database.svg",
     url: "https://dev.mysql.com/doc/",
   },
   {
@@ -91,7 +91,7 @@ export const Cards = [
         popular que permite crear y administrar sitios web de manera
         sencilla. Proporciona una interfaz intuitiva y una amplia variedad
         de complementos y temas.`,
-    img: "/assets/wordpress.svg",
+    img: "/assets/icons-dark/wordpress.svg",
     url: "https://wordpress.com/es/",
   },
   {
@@ -101,7 +101,7 @@ export const Cards = [
         popular que permite crear y administrar sitios web de manera
         sencilla. Proporciona una interfaz intuitiva y una amplia variedad
         de complementos y temas.`,
-    img: "/assets/git.svg",
+    img: "/assets/icons-dark/git.svg",
     url: "https://wordpress.com/es/",
   },
 ];
