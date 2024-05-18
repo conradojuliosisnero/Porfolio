@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./projects.css";
 import getProjects from "../../services/MockApi/projects";
 import Icon from "./Icons";
+import Status from "./status/Status";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -28,7 +29,7 @@ export default function Projects() {
       {error && <p>{error}</p>}
       {!loading && !error && (
         <div className="contend__cards-proyectos">
-          {projects?.map(({ id, name, img, url, icons }) => (
+          {projects?.map(({ id, name, img, url, icons, description,status }) => (
             <div className="wrapper__card" key={id}>
               <div className="wrapper__img">
                 {/* img projeect  */}
@@ -37,9 +38,7 @@ export default function Projects() {
                 </div>
                 {/* description  */}
                 <div className="card__description">
-                  <p className="description__project">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  </p>
+                  <p className="description__project">{description}</p>
                 </div>
               </div>
               <div className="wrapper__name">
@@ -51,6 +50,7 @@ export default function Projects() {
                 </div>
                 {/* stack icons  */}
                 <Icon icons={icons} />
+                <Status status={status} />
               </div>
             </div>
           ))}

@@ -152,10 +152,6 @@
 /* Para pantallas más pequeñas, como tablets y teléfonos móviles */
 @media (max-width: 768px) {
   .about__skills {
-      padding: 0 10px; /* Modificación aquí */
-  }
-
-  .about__contenido__skills .about__imagen__skills {
-      padding: 0; /* Modificación aquí */
+      padding: 0 0px;
   }
 }

@@ -1,180 +1,145 @@
 .contenido__principal {
-	padding: 0px 50px 0px 50px;
-	padding-top: 120px;
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	grid-template-areas:
-		"redes contenido contenido foto foto foto"
-		"redes contenido contenido foto foto foto";
-	grid-template-rows: 2 1fr;
+  display: flex;
+  padding-top: 120px;
 }
 
 .redes__sociales {
-	grid-area: redes;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px;
+  flex-direction: column;
 }
 
 .list__iconos {
-	display: flex;
-	width: 100%;
-	justify-content: center;
-	margin: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0;
 }
 
 .icono {
-	width: 35px;
-	margin: 10px 0;
-	cursor: pointer;
-	transition: transform 0.3s ease;
+  width: 35px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .icono:hover {
-	transform: scale(1.4);
+  transform: scale(1.4);
 }
 
 .contenedor__bienvenida {
-	grid-area: contenido;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .bienvenida__titulo {
-	font-size: 35px;
-	width: 100%;
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
+  display: flex;
+  font-size: 2.5em;
+  width: 100%;
+  margin: .2em 0em;
+  justify-content: center;
+  align-items: center;
 }
 
 .bienvenida__titulo .name__welcome {
-	letter-spacing: 7px;
-	margin: 0;
+  letter-spacing: 7px;
+  margin: 0;
 }
 
 .leyenda {
-	color: #818181;
-	font-size: 18px;
+  color: #818181;
+  font-size: 18px;
 }
 
 .bienvenida__texto {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .texto {
-	display: flex;
-	width: 100%;
-	text-align: start;
-	line-height: 20px;
-	color: #777575;
+  display: flex;
+  width: 20rem;
+  text-align: start;
+  line-height: 20px;
+  color: #777575;
 }
 
 .boton__contactar {
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .boton {
-	background-color: #94f894;
-	border-radius: 7px;
-	border: none;
-	padding: 20px 35px;
-	margin: 25px 0;
-	position: relative;
-	overflow: hidden;
-	cursor: pointer;
-	transition: box-shadow 0.5s ease-in-out;
+  background-color: #94f894;
+  border-radius: .7em;
+  border: none;
+  padding: 20px 35px;
+  margin: 25px 0px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .boton::after {
-	content: "";
-	position: absolute;
-	background-color: #6bea6b;
-	width: 1px;
-	height: 1px;
-	left: 50%;
-	top: 50%;
-	border-radius: 50%;
-	z-index: 1;
-	transition: transform 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  background-color: #6bea6b;
+  width: 1px;
+  height: 1px;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
 }
 
 .boton:hover {
-	box-shadow: 0px 3px 15px 0px #55a655;
-	background-color: #3e903e;
+  box-shadow: 0px 3px 15px 0px #55a655;
+  background-color: #3e903e;
 }
 
 .boton:hover::after {
-	transform: scale(700);
-	bottom: 0;
+  transform: scale(700);
+  bottom: 0;
 }
 
 .boton span {
-	position: relative;
-	z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .boton a {
-	color: #ffffff;
-	text-decoration: none;
-	font-size: 25px;
-	font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .contenedor__foto {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	grid-area: foto;
-	cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  grid-area: foto;
+  cursor: pointer;
 }
 
 .foto {
-	width: 380px;
-	object-fit: cover;
-	transition: transform 0.5s ease-out;
+  width: 380px;
+  object-fit: cover;
+  transition: transform 0.5s ease-out;
 }
 
-@keyframes animate {
-	0% {
-		transform: translateY(-20px);
-	}
-	50% {
-		transform: translateY(0);
-	}
-	100% {
-		transform: translateY(-20px);
-	}
-}
-
-@media screen and (max-width:720px){
-
-	.contenido__principal {
-		padding: 70px 50px 0px 50px;
-		grid-template-areas:
-			"contenido contenido contenido contenido contenido contenido"
-			"contenido contenido contenido contenido contenido contenido"
-			"redes redes redes redes redes redes";
-		
-	}
-
-	.redes__sociales{
-		flex-direction: row;
-		padding: 30px 0px;
-	}
-
-	.texto{
-		width: 80%;
-	}
-
+@media screen and (max-width: 768px) {
 }
