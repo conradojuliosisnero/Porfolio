@@ -6,6 +6,7 @@ export default function Icon({ icons }) {
     js: "JavaScript",
     react: "React",
     Api: "API",
+    redux: "REDUX",
     python: "Python",
     Nextjs: "Next.js",
     php: "PHP",

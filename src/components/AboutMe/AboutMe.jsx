@@ -8,10 +8,6 @@ function AboutMe() {
         <span className="titulo">About Me</span>
       </div>
       <div className="about__contenido">
-        {/* <div className="about__imagen scroll__img">
-					<img className="imagen" src="../../img/file-text-iso-color.png" />
-					<span>Conrado Julio</span>
-				</div> */}
         <div className="about__texto">
           <div>
             <p className="texto">{TextAbout}</p>

@@ -1,0 +1,25 @@
+.status__project--card{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 15px 0px 0px 5px;
+}
+
+.status__done{
+    background: rgba(170, 77, 204, 0.539);
+    padding: 3px 15px;
+    font-weight: 600;
+    color: rgb(153, 83, 219);
+    border: solid 2px rgb(153, 83, 219);
+    border-radius: 1.5em;
+}
+
+.status__progress{
+    background: rgba(255, 166, 23, 0.639);
+    padding: 3px 15px;
+    font-weight: 600;
+    color: #ff8f27;
+    border: solid 2px rgba(249, 157, 8, 0.539);
+    border-radius: 1.5em;
+}

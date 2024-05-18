@@ -13,8 +13,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 700px;
-  padding: 25px 0px 0px 0px;
+  width: 100%;
+  padding: 25px 250px;
 }
 
 /* título */
@@ -128,24 +128,15 @@
 }
 
 @media screen and (max-width: 768px) {
-  .about__titulo .titulo {
-    font-size: 30px;
-  }
 
-  .about__contenido {
-    flex-direction: column;
-  }
-
-  .about__contenido .about__imagen {
-    padding: 0;
-    text-align: center;
-  }
-
-  .about__contenido .about__imagen .imagen {
-    width: 70%;
+  .about__contenido{
+    width: 100%;
+    padding: 0px 50px;
+    margin: 0px 20px;
   }
 
   .about__contenido .about__texto {
-    width: 80%;
+    width: 100%;
+    padding: 20px 0px;
   }
 }

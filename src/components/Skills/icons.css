@@ -1,7 +1,7 @@
 .Skill__icons {
     /* position: relative; */
-    padding: 30px 0px;
-    width: 700px;
+    padding: 30px 250px;
+    width: 100%;
     display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     justify-content: center;
@@ -40,4 +40,10 @@
 
 .iconos .img__iconos:hover {
     transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .Skill__icons {
+      padding: 0 0px;
+  }
 }

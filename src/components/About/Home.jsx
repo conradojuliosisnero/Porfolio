@@ -10,7 +10,7 @@ function Home() {
   return (
     <section className="home" id="Home">
       <div className="contenido__principal">
-        <aside className="redes__sociales">
+        {/* <aside className="redes__sociales">
           {LinkRedes.map((social) => (
             <div className="list__iconos" key={social.id}>
               <a href={social.link}>
@@ -18,9 +18,8 @@ function Home() {
               </a>
             </div>
           ))}
-        </aside>
+        </aside> */}
         <Welcome />
-        <Photo />
       </div>
       <AboutMe />
       <Skills />

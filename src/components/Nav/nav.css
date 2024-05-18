@@ -1,16 +1,12 @@
 /* Estilos generales */
-.darkMode span {
-  color: #ffffff;
-}
 
 .navegador {
   width: 100%;
   height: 50px;
-  position: fixed;
-  z-index: 1;
-  padding: 40px 0px;
+  position: relative;
+  padding: 10px 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #ffffff4c;
   backdrop-filter: blur(5px);
   align-items: center;
@@ -25,7 +21,7 @@
 }
 
 /* Estilos del menú */
-.navegador .menu {
+.menu {
   width: 100%;
   display: flex;
   flex: 1;
@@ -35,7 +31,7 @@
 }
 
 .icon__nav {
-  padding: 0px 25px;
+  padding: 0 25px;
   display: flex;
   font-weight: 700;
   text-decoration: none;
@@ -43,15 +39,14 @@
   font-size: 1.3rem;
 }
 
-.navegador .menu .lista {
+.lista {
   display: block;
   position: relative;
 }
 
-.navegador .menu .enlaces {
+.enlaces {
   text-decoration: none;
   font-weight: 700;
-  width: 100%;
   color: #000;
   display: flex;
   padding: 10px 20px;
@@ -59,7 +54,7 @@
   transition: color 300ms ease;
 }
 
-.navegador .menu .enlaces::after {
+.enlaces::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -72,7 +67,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.navegador .menu .enlaces:hover::after {
+.enlaces:hover::after {
   visibility: visible;
   transform: scaleX(1);
 }
@@ -90,35 +85,35 @@
   display: none;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   .navegador {
-    justify-content: flex-end;
+    position: fixed;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 200;
   }
 
   .menu {
-    position: fixed;
-    right: -100%;
+    position: absolute;
     top: 0;
+    right: -150%;
     height: 100vh;
-    z-index: 100;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: rgb(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    background-color: rgb(72, 209, 45);
     transition: right 300ms ease;
   }
 
   .menu__active {
-    right: 0;
-    top: 0;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
+    right: -10%;
+    height: 100vh;
   }
 
-  .navegador .menu__active .enlaces {
-    color: #383838;
-    padding: 20px 0px;
+  .enlaces {
+    color: #000;
+    padding: 20px 0;
     font-size: 1.5em;
   }
 
@@ -126,19 +121,8 @@
     width: 50px;
     height: 50px;
     display: flex;
-    position: fixed;
-    left: 20px;
     cursor: pointer;
-    margin: 15px 0px 0px 0px;
-  }
-
-  .Responsive__menu {
-    position: absolute;
-  }
-
-  .menu__responsive {
-    opacity: 1;
-    transition: transform 300ms ease;
+    z-index: 2;
   }
 
   .menu__responsive.active {
@@ -149,7 +133,7 @@
   .close__responsive {
     cursor: pointer;
     display: flex;
-    opacity: 0;
+    opacity: 1;
     width: 50px;
     height: 50px;
     position: absolute;
@@ -159,7 +143,6 @@
   }
 
   .active__close {
-    opacity: 1;
     transform: rotate(180deg);
   }
 }
