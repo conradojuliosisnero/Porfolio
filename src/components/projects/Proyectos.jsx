@@ -45,7 +45,7 @@ export default function Projects() {
                 {/* PROJECT NAME  */}
                 <div className="card__project--name">
                   <a className="name__project" href={url}>
-                    {name}
+                    {name} 
                   </a>
                 </div>
                 {/* stack icons  */}

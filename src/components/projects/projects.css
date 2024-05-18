@@ -41,9 +41,8 @@
 
 .wrapper__card {
   width: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: solid .24em #a5a5a5;
+  margin: 0px 10px;
   flex-wrap: wrap;
   overflow: hidden;
   background-color: rgba(231, 231, 231, 0.712);
